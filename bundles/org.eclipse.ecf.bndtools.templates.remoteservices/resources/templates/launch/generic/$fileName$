@@ -32,5 +32,8 @@
 	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)'
 	
--runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false\n\
-	-Dorg.eclipse.ecf.osgi.service.remoteserviceadmin.hostcontainerselector.excludeddescriptions=ecf.generic.client,ecf.generic.ssl.server,ecf.generic.ssl.client\n\
+-runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false \
+	\n\
+	-Dorg.eclipse.ecf.osgi.service.remoteserviceadmin.hostcontainerselector.excludeddescriptions="ecf.generic.client,ecf.generic.ssl.server,ecf.generic.ssl.client"
+
+	
