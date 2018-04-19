@@ -1,0 +1,36 @@
+-runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
+-runee: JavaSE-1.8
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.scr)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.console)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.discovery)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.identity)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.remoteservice)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.remoteservice)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.remoteservice.asyncproxy)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.sharedobject)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.osgi.services.remoteserviceadmin)',\
+	osgi.identity;filter:='(osgi.identity=$projectName$)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.core.jobs)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.common)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.concurrent)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)'
+	
+-runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false\n\
+	-Dorg.eclipse.ecf.osgi.service.remoteserviceadmin.hostcontainerselector.excludeddescriptions=ecf.generic.client,ecf.generic.ssl.server,ecf.generic.ssl.client\n\

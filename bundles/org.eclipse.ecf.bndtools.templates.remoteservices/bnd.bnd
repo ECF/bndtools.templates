@@ -1,0 +1,49 @@
+category: bbb/OSGi Remote Service Templates
+
+dataurl: data:image/gif;base64
+rsapi-icon: ${dataurl},${base64;icons/rsapi.gif}
+rsimpl-icon: ${dataurl},${base64;icons/rsimpl.gif}
+
+api-template:\
+	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=Remote Service API Project; \
+		category=${category}; \
+		dir=templates/rsapi; \
+		icon="${rsapi-icon}"; \
+		help=templates/rsapihelp.xml
+				
+impl-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=Remote Service Impl Project; \
+		category=${category}; \
+		dir=templates/rsimpl; \
+		icon="${rsimpl-icon}"; \
+		help=templates/rsimplhelp.xml; \
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
+
+consumer-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=Remote Service Consumer Project; \
+		category=${category}; \
+		dir=templates/rsconsumer; \
+		icon="${rsimpl-icon}"; \
+		help=templates/rsconsumerhelp.xml; \
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
+
+launch-template-generic:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=ECF Generic Distribution Provider;\
+		category=${category};\
+		dir=templates/launch/generic;\
+		icon="${rsimpl-icon}"
+		
+Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${launch-template-generic}
+Bundle-Version: 1.0.11.${tstamp}
+
+-resourceonly: true
+-includeresource: resources
+Private-Package: org.eclipse.ecf.bndtools.templates.remoteservices
+-buildpath: osgi.cmpn
