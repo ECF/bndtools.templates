@@ -16,7 +16,6 @@
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.remoteservice)',\
 	osgi.identity;filter:='(osgi.identity=$projectName$)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.core.jobs)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)'
 		
 -resolve: auto
