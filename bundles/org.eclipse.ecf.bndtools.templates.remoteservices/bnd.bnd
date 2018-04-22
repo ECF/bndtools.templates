@@ -41,7 +41,7 @@ launch-template-generic:\
 		icon="${rsimpl-icon}"
 		
 Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${launch-template-generic}
-Bundle-Version: 1.0.14.${tstamp}
+Bundle-Version: 1.0.15.${tstamp}
 
 -resourceonly: true
 -includeresource: resources

@@ -11,27 +11,14 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.console)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.discovery)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.identity)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.remoteservice)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.remoteservice)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.remoteservice.asyncproxy)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.sharedobject)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.osgi.services.remoteserviceadmin)',\
 	osgi.identity;filter:='(osgi.identity=$projectName$)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.core.jobs)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.common)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.concurrent)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)'
-	
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)'
+		
 -resolve: auto
 
 -runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false \
