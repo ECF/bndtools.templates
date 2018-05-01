@@ -1,0 +1,21 @@
+package $basePackageName$;
+
+import org.osgi.service.component.annotations.*;
+
+import java.util.concurrent.CompletableFuture;
+
+import org.example.remoteservice.async.api.ExampleAsyncRemoteService;
+
+@Component(property = { "service.exported.interfaces=*", 
+                        "service.intents=osgi.basic",
+                        "service.intents=osgi.async"})
+public class ExampleAsyncRemoteServiceImpl implements ExampleAsyncRemoteService {
+
+    public CompletableFuture<String> hello(String from) {
+        System.out.println("ExampleRemoteServiceImpl.hello called from="+from);
+        CompletableFuture<String> cf = new CompletableFuture<String>();
+        cf.complete("Hello "+from);
+        return cf;
+    }
+
+}
