@@ -64,13 +64,20 @@ consumer-async-template:\
 
 launch-template-generic:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ECF Generic Distribution Provider;\
+		name=ECF Generic Distribution Provider with Zeroconf Discovery;\
 		category=${category};\
 		dir=templates/launch/generic;\
 		icon="${rsimpl-icon}"
+
+launch-template-generic-etcd:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=ECF Generic Distribution Provider with Etcd Discovery;\
+		category=${category};\
+		dir=templates/launch/genericetcd;\
+		icon="${rsimpl-icon}"
 		
-Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}
-Bundle-Version: 1.0.18.${tstamp}
+Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}
+Bundle-Version: 1.0.19.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
