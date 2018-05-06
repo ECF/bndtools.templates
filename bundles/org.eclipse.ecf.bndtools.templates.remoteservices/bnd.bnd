@@ -77,7 +77,7 @@ launch-template-generic-etcd:\
 		icon="${rsimpl-icon}"
 		
 Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}
-Bundle-Version: 1.0.19.${tstamp}
+Bundle-Version: 1.0.20.${tstamp}
 
 -resourceonly: true
 -includeresource: resources

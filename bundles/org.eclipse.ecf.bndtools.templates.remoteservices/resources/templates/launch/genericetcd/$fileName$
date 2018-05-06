@@ -21,12 +21,9 @@
 		
 -runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false \
 	\n\
-	-Dorg.eclipse.ecf.osgi.service.remoteserviceadmin.hostcontainerselector.excludeddescriptions="ecf.generic.client,ecf.generic.ssl.server,ecf.generic.ssl.client" \
-	\n\
 	-Decf.discovery.etcd.hostname=disco.ecf-project.org \
 	\n\
-	-Dorg.eclipse.ecf.core.util.traceBundles=org.eclipse.ecf.provider.etcd
-	
-	
-
+	-Dorg.eclipse.ecf.core.util.traceBundles=org.eclipse.ecf.provider.etcd \
+	\n\
+	-Dorg.eclipse.ecf.osgi.service.remoteserviceadmin.hostcontainerselector.excludeddescriptions="ecf.generic.client,ecf.generic.ssl.server,ecf.generic.ssl.client"
 	
