@@ -1,11 +1,11 @@
 <form>
-<p>This template is used to create a Remote Service Implementation project.  </p>
-<p>During project creation with this template, the apipackage/plugin </p>
-<p>containing the ExampleRemoteService class declaration must be provided </p>
-<p>so that the compile-time references to ExampleRemoteService can be </p>
-<p>resolved.  The apipackage/plugin name given should already exist in </p>
-<p>the workspace, and may be easily created by using the Remote Service </p>
-<p>API project template.  Once created, the new project will have a </p>
-<p>class implementing ExampleRemoteService with OSGi Remote Services </p>
-<p>service properties for exporting as a remote service.</p>
+<p>This template is used to create a Remote Service Implementation project.  
+During project creation with this template, the apipackage/plugin 
+containing the ExampleRemoteService class declaration must be provided 
+so that the compile-time references to ExampleRemoteService can be 
+resolved.  The apipackage/plugin name given should already exist in 
+the workspace, and may be easily created by using the Remote Service 
+API project template.  Once created, the new project will have a 
+class implementing ExampleRemoteService with OSGi Remote Services 
+service properties for exporting as a remote service.</p>
 </form>

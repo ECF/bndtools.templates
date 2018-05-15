@@ -1,13 +1,13 @@
 <form>
 <p>This template may be used to create a Remote Service Consumer project.</p>
 <p></p>
-<p>During project creation with this template, the apipackage/plugin </p>
-<p>containing the ExampleRemoteService class declaration must be </p>
-<p>provided so that the compile-time references to ExampleRemoteService </p>
-<p>can be resolved. The apipackage/plugin name given should already </p>
-<p>exist in the workspace, and may be easily created by using the </p>
-<p>Remote Service API project template. Upon creation, the project </p>
-<p>will have a class with an ExampleRemoteService interface injected </p>
-<p>via DS.   Upon activation, the injected ExampleRemoteService is </p>
-<p>called.</p>
+<p>During project creation with this template, the apipackage/plugin 
+containing the ExampleRemoteService class declaration must be 
+provided so that the compile-time references to ExampleRemoteService 
+can be resolved. The apipackage/plugin name given should already 
+exist in the workspace, and may be easily created by using the 
+Remote Service API project template. Upon creation, the project 
+will have a class with an ExampleRemoteService interface injected 
+via DS.   Upon activation, the injected ExampleRemoteService is 
+called.</p>
 </form>
