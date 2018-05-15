@@ -1,7 +1,7 @@
 package $basePackageName$;
 
 import org.osgi.service.component.annotations.*;
-import org.example.remoteservice.async.api.ExampleAsyncRemoteService;
+import $apipackage$.ExampleAsyncRemoteService;
 
 @Component(immediate=true)
 public class ExampleAsyncRemoteServiceConsumer {

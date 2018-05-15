@@ -91,7 +91,7 @@ launch-template-rosgi-etcd:\
 		icon="${rsimpl-icon}"
 		
 Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}
-Bundle-Version: 1.0.21.${tstamp}
+Bundle-Version: 1.0.22.${tstamp}
 
 -resourceonly: true
 -includeresource: resources

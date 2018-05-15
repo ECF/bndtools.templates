@@ -4,7 +4,7 @@ import org.osgi.service.component.annotations.*;
 
 import java.util.concurrent.CompletableFuture;
 
-import org.example.remoteservice.async.api.ExampleAsyncRemoteService;
+import $apipackage$.ExampleAsyncRemoteService;
 
 @Component(property = { "service.exported.interfaces=*", 
                         "service.intents=osgi.basic",
