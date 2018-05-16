@@ -1,5 +1,5 @@
 <form>
-<p>This template is used to create a remote service API project.</p>
+<p>This template is used to create a Remote Service API project.</p>
 <p></p>
 <p>Upon creation, the project will have a single example service interface.  The Impl Project template can then be used to create </p>
 <p>an implementation of the ExampleRemoteService.  The package name given when creating this project will be required when creating </p>
