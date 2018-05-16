@@ -6,8 +6,8 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 @ObjectClassDefinition(id = "org.eclipse.ecf.bndtools.templates.remoteservices.async", name = ImplAsyncTemplateMeta.NAME, description = ImplAsyncTemplateMeta.NAME )
 public @interface ImplAsyncTemplateMeta {
 
-	public static final String NAME = "Remote Service Async Implementation/Consumer Project Template";
+	public static final String NAME = "Remote Service Async Project Template";
 	
-	@AttributeDefinition(name = "API Package", description = "The apipackage/plugin name where ExampleAsyncRemoteService interface class exists in workspace.  May be created via the Remote Service API project template.")
-	String apipackage() default "org.example.remoteservice.async.api";
+	@AttributeDefinition(name = "API Package", description = "The package in workspace where ExampleAsyncRemoteService interface class has been declared.  May be created via the Async Remote Service API project template.")
+	String apipackage() default "your.api.package.here";
 }
