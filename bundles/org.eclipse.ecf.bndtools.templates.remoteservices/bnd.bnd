@@ -90,7 +90,7 @@ launch-template-rosgi-etcd:\
 		dir=templates/launch/rosgietcd;\
 		icon="${rsimpl-icon}"
 		
-launch-template-rosgi:\
+launch-template-xmlrpc:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
 		name=ECF XmlRpc Distribution Provider with Zeroconf Discovery;\
 		category=${category};\
@@ -104,8 +104,8 @@ launch-template-xmlrpc-etcd:\
 		dir=templates/launch/xmlrpcetcd;\
 		icon="${rsimpl-icon}"
 
-Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}
-Bundle-Version: 1.0.27.${tstamp}
+Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc},${launch-template-xmlrpc-etcd}
+Bundle-Version: 1.0.28.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
