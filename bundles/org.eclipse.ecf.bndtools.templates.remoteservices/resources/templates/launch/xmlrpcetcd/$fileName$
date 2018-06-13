@@ -1,0 +1,33 @@
+-runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
+-runee: JavaSE-1.8
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.scr)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.etcd)',\
+	osgi.identity;filter:='(osgi.identity=$projectName$)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
+	bnd.identity;id='org.eclipse.ecf.provider.xmlrpc'
+
+-runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false \
+	\n\
+	-Decf.discovery.etcd.hostname=disco.ecf-project.org \
+	\n\
+	-Dorg.eclipse.ecf.core.util.traceBundles=org.eclipse.ecf.provider.etcd \
+	\n\
+	-Dorg.osgi.service.http.port=8181\n\
+	\n\
+	-Decf.xmlrpc.server.port=8181\n\
+	
+	
