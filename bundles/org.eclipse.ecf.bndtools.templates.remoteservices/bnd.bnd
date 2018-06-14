@@ -104,8 +104,24 @@ launch-template-xmlrpc-etcd:\
 		dir=templates/launch/xmlrpcetcd;\
 		icon="${rsimpl-icon}"
 
-Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc},${launch-template-xmlrpc-etcd}
-Bundle-Version: 1.0.28.${tstamp}
+launch-template-pythonjavahello:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=ECF Python.Java Hello Example;\
+		category=${category};\
+		dir=templates/launch/pythonjavahello;\
+		icon="${rsimpl-icon}";\
+		help=templates/pythonjavahello.xml
+
+launch-template-pythonjavaprotobufhello:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=ECF Python.Java Protobuf Hello Example;\
+		category=${category};\
+		dir=templates/launch/pythonjavaprotobufhello;\
+		icon="${rsimpl-icon}";\
+		help=templates/pythonjavaprotobufhello.xml
+
+Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc},${launch-template-xmlrpc-etcd},${launch-template-pythonjavahello},${launch-template-pythonjavaprotobufhello}
+Bundle-Version: 1.1.0.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
