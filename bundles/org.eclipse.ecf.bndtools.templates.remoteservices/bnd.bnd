@@ -1,4 +1,6 @@
-category: bbb/OSGi Remote Service Templates
+project-category: bbb/Remote Service Project Templates
+bndrun-category: bbb/Remote Service Bndrun Templates
+bndrun-examples-category: bbb/Remote Service Example Templates
 
 dataurl: data:image/gif;base64
 rsapi-icon: ${dataurl},${base64;icons/rsapi.gif}
@@ -8,7 +10,7 @@ api-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=Remote Service API Project; \
-		category=${category}; \
+		category=${project-category}; \
 		dir=templates/rsapi; \
 		icon="${rsapi-icon}"; \
 		help=templates/rsapihelp.xml
@@ -17,7 +19,7 @@ api-async-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=Async Remote Service API Project; \
-		category=${category}; \
+		category=${project-category}; \
 		dir=templates/rsapiasync; \
 		icon="${rsapi-icon}"; \
 		help=templates/rsapihelpasync.xml
@@ -26,7 +28,7 @@ impl-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=Remote Service Impl Project; \
-		category=${category}; \
+		category=${project-category}; \
 		dir=templates/rsimpl; \
 		icon="${rsimpl-icon}"; \
 		help=templates/rsimplhelp.xml; \
@@ -36,7 +38,7 @@ impl-async-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=Async Remote Service Impl Project; \
-		category=${category}; \
+		category=${project-category}; \
 		dir=templates/rsimplasync; \
 		icon="${rsimpl-icon}"; \
 		help=templates/rsimplhelpasync.xml; \
@@ -46,7 +48,7 @@ consumer-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=Remote Service Consumer Project; \
-		category=${category}; \
+		category=${project-category}; \
 		dir=templates/rsconsumer; \
 		icon="${rsimpl-icon}"; \
 		help=templates/rsconsumerhelp.xml; \
@@ -56,7 +58,7 @@ consumer-async-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=Async Remote Service Consumer Project; \
-		category=${category}; \
+		category=${project-category}; \
 		dir=templates/rsconsumerasync; \
 		icon="${rsimpl-icon}"; \
 		help=templates/rsconsumerhelpasync.xml; \
@@ -64,64 +66,64 @@ consumer-async-template:\
 
 launch-template-generic:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ECF Generic Distribution Provider with Zeroconf Discovery;\
-		category=${category};\
+		name=Generic Distribution Provider with Zeroconf Discovery;\
+		category=${bndrun-category};\
 		dir=templates/launch/generic;\
 		icon="${rsimpl-icon}"
 
 launch-template-generic-etcd:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ECF Generic Distribution Provider with Etcd Discovery;\
-		category=${category};\
+		name=Generic Distribution Provider with Etcd Discovery;\
+		category=${bndrun-category};\
 		dir=templates/launch/genericetcd;\
 		icon="${rsimpl-icon}"
 
 launch-template-rosgi:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ECF ROSGi Distribution Provider with Zeroconf Discovery;\
-		category=${category};\
+		name=ROSGi Distribution Provider with Zeroconf Discovery;\
+		category=${bndrun-category};\
 		dir=templates/launch/rosgi;\
 		icon="${rsimpl-icon}"
 
 launch-template-rosgi-etcd:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ECF ROSGi Distribution Provider with Etcd Discovery;\
-		category=${category};\
+		name=ROSGi Distribution Provider with Etcd Discovery;\
+		category=${bndrun-category};\
 		dir=templates/launch/rosgietcd;\
 		icon="${rsimpl-icon}"
 		
 launch-template-xmlrpc:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ECF XmlRpc Distribution Provider with Zeroconf Discovery;\
-		category=${category};\
+		name=XmlRpc Distribution Provider with Zeroconf Discovery;\
+		category=${bndrun-category};\
 		dir=templates/launch/xmlrpc;\
 		icon="${rsimpl-icon}"
 
 launch-template-xmlrpc-etcd:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ECF XmlRpc Distribution Provider with Etcd Discovery;\
-		category=${category};\
+		name=XmlRpc Distribution Provider with Etcd Discovery;\
+		category=${bndrun-category};\
 		dir=templates/launch/xmlrpcetcd;\
 		icon="${rsimpl-icon}"
 
 launch-template-pythonjavahello:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ECF Python.Java Hello Example;\
-		category=${category};\
+		name=Python.Java Hello Example;\
+		category=${bndrun-examples-category};\
 		dir=templates/launch/pythonjavahello;\
 		icon="${rsimpl-icon}";\
 		help=templates/pythonjavahello.xml
 
 launch-template-pythonjavaprotobufhello:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ECF Python.Java Protobuf Hello Example;\
-		category=${category};\
+		name=Python.Java Protobuf Hello Example;\
+		category=${bndrun-examples-category};\
 		dir=templates/launch/pythonjavaprotobufhello;\
 		icon="${rsimpl-icon}";\
 		help=templates/pythonjavaprotobufhello.xml
 
 Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc},${launch-template-xmlrpc-etcd},${launch-template-pythonjavahello},${launch-template-pythonjavaprotobufhello}
-Bundle-Version: 1.1.0.${tstamp}
+Bundle-Version: 1.1.1.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
