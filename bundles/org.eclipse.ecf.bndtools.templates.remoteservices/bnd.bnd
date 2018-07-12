@@ -15,6 +15,15 @@ api-template:\
 		icon="${rsapi-icon}"; \
 		help=templates/rsapihelp.xml
 
+jaxrsapi-template:\
+	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=JaxRS Remote Service API Project; \
+		category=${project-category}; \
+		dir=templates/jaxrsapi; \
+		icon="${rsapi-icon}"; \
+		help=templates/jaxrsapihelp.xml
+
 api-async-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
@@ -32,6 +41,16 @@ impl-template:\
 		dir=templates/rsimpl; \
 		icon="${rsimpl-icon}"; \
 		help=templates/rsimplhelp.xml; \
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
+
+jaxrsimpl-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=JaxRS Remote Service Impl Project; \
+		category=${project-category}; \
+		dir=templates/jaxrsimpl; \
+		icon="${rsimpl-icon}"; \
+		help=templates/jaxrsimplhelp.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
 
 impl-async-template:\
@@ -54,6 +73,16 @@ consumer-template:\
 		help=templates/rsconsumerhelp.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
 
+jaxrsconsumer-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=JaxRS Remote Service Consumer Project; \
+		category=${project-category}; \
+		dir=templates/jaxrsconsumer; \
+		icon="${rsimpl-icon}"; \
+		help=templates/rsconsumerhelp.xml; \
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
+		
 consumer-async-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
@@ -122,8 +151,24 @@ launch-template-pythonjavaprotobufhello:\
 		icon="${rsimpl-icon}";\
 		help=templates/pythonjavaprotobufhello.xml
 
-Provide-Capability: ${api-template}, ${impl-template}, ${consumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc},${launch-template-xmlrpc-etcd},${launch-template-pythonjavahello},${launch-template-pythonjavaprotobufhello}
-Bundle-Version: 1.1.1.${tstamp}
+launch-template-jaxrsjerseyserver:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=JaxRS Jersey Server Distribution Provider with Zeroconf Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/jaxrsjerseyserver;\
+		icon="${rsimpl-icon}";\
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml
+
+launch-template-jaxrsjerseyclient:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=JaxRS Jersey Client Distribution Provider with Zeroconf Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/jaxrsjerseyclient;\
+		icon="${rsimpl-icon}";\
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml
+		
+Provide-Capability: ${api-template}, ${jaxrsapi-template}, ${impl-template}, ${jaxrsimpl-template}, ${consumer-template}, ${jaxrsconsumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc}, ${launch-template-xmlrpc-etcd}, ${launch-template-pythonjavahello}, ${launch-template-pythonjavaprotobufhello}, ${launch-template-jaxrsjerseyserver}, ${launch-template-jaxrsjerseyclient}
+Bundle-Version: 1.1.4.${tstamp}
 
 -resourceonly: true
 -includeresource: resources

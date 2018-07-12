@@ -1,0 +1,9 @@
+<form>
+<p>This template may be used to create a JaxRS Remote Service Consumer project.</p>
+<p></p>
+<p>During project creation with this template, the apipackage/plugin containing the HelloWorldService class declaration must </p>
+<p>be provided so that the compile-time references to HelloWorldService can be resolved. The apipackage/plugin name given </p>
+<p>should already exist in the workspace, and may be easily created by using the JaxRS Remote Service API project template. Upon </p>
+<p>creation, the project will have a class with an HelloWorldService interface injected via DS.   Upon activation, the injected </p>
+<p>HelloWorldService.getMessage() is called.</p>
+</form>
