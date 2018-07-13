@@ -80,7 +80,7 @@ jaxrsconsumer-template:\
 		category=${project-category}; \
 		dir=templates/jaxrsconsumer; \
 		icon="${rsimpl-icon}"; \
-		help=templates/rsconsumerhelp.xml; \
+		help=templates/jaxrsconsumerhelp.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
 		
 consumer-async-template:\
@@ -167,8 +167,24 @@ launch-template-jaxrsjerseyclient:\
 		icon="${rsimpl-icon}";\
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml
 		
-Provide-Capability: ${api-template}, ${jaxrsapi-template}, ${impl-template}, ${jaxrsimpl-template}, ${consumer-template}, ${jaxrsconsumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc}, ${launch-template-xmlrpc-etcd}, ${launch-template-pythonjavahello}, ${launch-template-pythonjavaprotobufhello}, ${launch-template-jaxrsjerseyserver}, ${launch-template-jaxrsjerseyclient}
-Bundle-Version: 1.1.4.${tstamp}
+launch-template-jaxrscxfserver:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=JaxRS CXF Server Distribution Provider with Zeroconf Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/jaxrscxfserver;\
+		icon="${rsimpl-icon}";\
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml
+
+launch-template-jaxrscxfclient:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=JaxRS CXF Client Distribution Provider with Zeroconf Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/jaxrscxfclient;\
+		icon="${rsimpl-icon}";\
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml
+
+Provide-Capability: ${api-template}, ${jaxrsapi-template}, ${impl-template}, ${jaxrsimpl-template}, ${consumer-template}, ${jaxrsconsumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc}, ${launch-template-xmlrpc-etcd}, ${launch-template-pythonjavahello}, ${launch-template-pythonjavaprotobufhello}, ${launch-template-jaxrsjerseyserver}, ${launch-template-jaxrsjerseyclient}, ${launch-template-jaxrscxfserver}, ${launch-template-jaxrscxfclient}
+Bundle-Version: 1.1.5.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
