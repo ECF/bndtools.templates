@@ -6,8 +6,8 @@ import java.util.concurrent.CompletableFuture;
 
 import $apipackage$.ExampleAsyncRemoteService;
 
-@Component(property = { "service.exported.interfaces=*", "service.intents=osgi.basic",
-		"service.intents=osgi.async" })
+@Component(property = { "service.exported.interfaces=*", "service.exported.intents=osgi.basic",
+		"service.exported.intents=osgi.async" })
 public class ExampleAsyncRemoteServiceImpl implements ExampleAsyncRemoteService {
 
     public CompletableFuture<String> hello(String from) {

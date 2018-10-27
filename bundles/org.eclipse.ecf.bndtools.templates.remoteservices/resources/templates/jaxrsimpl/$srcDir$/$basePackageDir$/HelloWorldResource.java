@@ -7,7 +7,7 @@ import $apipackage$.HelloWorldService;
 import org.osgi.service.component.annotations.Component;
 
 @Path("/helloworld")
-@Component(property = { "service.exported.interfaces=*", "service.intents=jaxrs" })
+@Component(property = { "service.exported.interfaces=*", "service.exported.intents=jaxrs" })
 public class HelloWorldResource implements HelloWorldService {
 	@GET
 	@Path("/hello")
