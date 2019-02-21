@@ -184,9 +184,11 @@ launch-template-jaxrscxfclient:\
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml
 
 Provide-Capability: ${api-template}, ${jaxrsapi-template}, ${impl-template}, ${jaxrsimpl-template}, ${consumer-template}, ${jaxrsconsumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc}, ${launch-template-xmlrpc-etcd}, ${launch-template-pythonjavahello}, ${launch-template-pythonjavaprotobufhello}, ${launch-template-jaxrsjerseyserver}, ${launch-template-jaxrsjerseyclient}, ${launch-template-jaxrscxfserver}, ${launch-template-jaxrscxfclient}
-Bundle-Version: 1.1.6.${tstamp}
+Bundle-Version: 1.2.0.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
 Private-Package: org.eclipse.ecf.bndtools.templates.remoteservices
+-runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
+-runee: JavaSE-1.8
 -buildpath: osgi.cmpn

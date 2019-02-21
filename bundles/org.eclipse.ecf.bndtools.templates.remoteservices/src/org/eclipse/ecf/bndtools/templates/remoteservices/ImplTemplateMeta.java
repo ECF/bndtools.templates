@@ -1,8 +1,5 @@
 package org.eclipse.ecf.bndtools.templates.remoteservices;
 
-import org.osgi.service.metatype.annotations.AttributeDefinition;
-import org.osgi.service.metatype.annotations.ObjectClassDefinition;
-
 @ObjectClassDefinition(id = "org.eclipse.ecf.bndtools.templates.remoteservices", name = ImplTemplateMeta.NAME, description = ImplTemplateMeta.NAME )
 public @interface ImplTemplateMeta {
 
