@@ -11,7 +11,7 @@ osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
     bnd.identity;id='org.apache.felix.gogo.command',\
     bnd.identity;id='org.apache.felix.gogo.shell'
 
--runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
+-runfw: org.apache.felix.framework;version='[6.0.0,7.0.0)'
 -runee: JavaSE-1.8
 	
 -runbundles: \
