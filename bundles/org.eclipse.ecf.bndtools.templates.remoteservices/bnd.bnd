@@ -189,6 +189,6 @@ Bundle-Version: 1.2.6.${tstamp}
 -resourceonly: true
 -includeresource: resources
 Private-Package: org.eclipse.ecf.bndtools.templates.remoteservices
--buildpath: osgi.cmpn;version=7.0
+-buildpath: osgi.cmpn
 -runfw: org.eclipse.osgi;version='[3.13.100.v20180827-1536,3.13.100.v20180827-1536]'
 -runee: JavaSE-1.8
