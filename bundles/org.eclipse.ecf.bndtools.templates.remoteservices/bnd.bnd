@@ -187,7 +187,7 @@ javac.source: 1.8
 javac.target: 1.8
 
 Provide-Capability: ${api-template}, ${jaxrsapi-template}, ${impl-template}, ${jaxrsimpl-template}, ${consumer-template}, ${jaxrsconsumer-template}, ${api-async-template}, ${impl-async-template}, ${consumer-async-template}, ${launch-template-generic}, ${launch-template-generic-etcd}, ${launch-template-rosgi}, ${launch-template-rosgi-etcd}, ${launch-template-xmlrpc}, ${launch-template-xmlrpc-etcd}, ${launch-template-pythonjavahello}, ${launch-template-pythonjavaprotobufhello}, ${launch-template-jaxrsjerseyserver}, ${launch-template-jaxrsjerseyclient}, ${launch-template-jaxrscxfserver}, ${launch-template-jaxrscxfclient}
-Bundle-Version: 1.3.1.${tstamp}
+Bundle-Version: 1.3.2.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
