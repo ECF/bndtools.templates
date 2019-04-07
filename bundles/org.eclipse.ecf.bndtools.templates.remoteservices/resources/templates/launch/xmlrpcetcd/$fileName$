@@ -4,8 +4,6 @@
 -resolve.effective: active;skip:="osgi.service"
 
 -runrequires: \
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.scr)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)',\
@@ -18,8 +16,16 @@
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.etcd)',\
 	osgi.identity;filter:='(osgi.identity=$projectName$)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
-	bnd.identity;id='org.eclipse.ecf.provider.xmlrpc'
+	bnd.identity;id='org.eclipse.ecf.provider.xmlrpc',\
+	bnd.identity;id='org.osgi.util.function',\
+	bnd.identity;id='org.osgi.util.promise',\
+    bnd.identity;id='org.apache.felix.gogo.runtime',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='org.apache.felix.gogo.command'
 
+-runproperties: osgi.console=,\
+				osgi.console.enable.builtin=false
+    
 -runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false \
 	\n\
 	-Decf.discovery.etcd.hostname=disco.ecf-project.org \

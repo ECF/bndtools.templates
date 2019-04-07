@@ -4,8 +4,6 @@
 -resolve.effective: active;skip:="osgi.service"
 
 -runrequires: \
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.scr)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)',\
@@ -20,7 +18,15 @@
 	bnd.identity;id='org.eclipse.ecf.examples.hello.provider',\
 	bnd.identity;id='org.slf4j.api',\
 	bnd.identity;id='org.slf4j.apis.log4j',\
-	bnd.identity;id='org.apache.log4j'
+	bnd.identity;id='org.apache.log4j',\
+	bnd.identity;id='org.osgi.util.function',\
+	bnd.identity;id='org.osgi.util.promise',\
+    bnd.identity;id='org.apache.felix.gogo.runtime',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='org.apache.felix.gogo.command'
 
+-runproperties: osgi.console=,\
+				osgi.console.enable.builtin=false
+    
 -runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false
 	

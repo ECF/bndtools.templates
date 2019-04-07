@@ -8,6 +8,6 @@
 javac.source: 1.8
 javac.target: 1.8
 
-Bundle-Version: 1.1.0.\${tstamp}
+Bundle-Version: 1.2.0.${tstamp}
 Private-Package: $basePackageName$
 
