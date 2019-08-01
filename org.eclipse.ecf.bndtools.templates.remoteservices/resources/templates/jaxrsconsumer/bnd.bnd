@@ -4,9 +4,14 @@
 	osgi.cmpn;version=7.0,\
 	$apipackage$;version=latest
 
-javac.source: 1.8
-javac.target: 1.8
+-testpath: \
+	\${junit},\
+	\${mockito},\
+	\${mockito-deps}
 
-Bundle-Version: 1.2.0.${tstamp}
-Private-Package: $basePackageName$
+$if(javaLevel)$
+javac.source: $javaLevel$
+javac.target: $javaLevel$
+$endif$
 
+Bundle-Version: 1.3.0.\${tstamp}

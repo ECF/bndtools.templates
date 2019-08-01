@@ -12,8 +12,9 @@ osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
 	bnd.identity;id='org.osgi.util.promise',\
     bnd.identity;id='org.apache.felix.gogo.runtime',\
 	bnd.identity;id='org.apache.felix.gogo.shell',\
-	bnd.identity;id='org.apache.felix.gogo.command'
-
+	bnd.identity;id='org.apache.felix.gogo.command',\
+	bnd.identity;id='org.apache.felix.http.jetty'
+	
 -runproperties: osgi.console=,\
 				osgi.console.enable.builtin=false
     

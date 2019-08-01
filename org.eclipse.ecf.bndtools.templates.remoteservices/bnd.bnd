@@ -18,7 +18,7 @@ api-template:\
 jaxrsapi-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=JaxRS Remote Service API Project; \
+		name=JaxRS Remote Service Hello API Project; \
 		category=${project-category}; \
 		dir=templates/jaxrsapi; \
 		icon="${rsapi-icon}"; \
@@ -46,7 +46,7 @@ impl-template:\
 jaxrsimpl-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=JaxRS Remote Service Impl Project; \
+		name=JaxRS Remote Service Hello Impl Project; \
 		category=${project-category}; \
 		dir=templates/jaxrsimpl; \
 		icon="${rsimpl-icon}"; \
@@ -76,7 +76,7 @@ consumer-template:\
 jaxrsconsumer-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=JaxRS Remote Service Consumer Project; \
+		name=JaxRS Remote Service Hello Consumer Project; \
 		category=${project-category}; \
 		dir=templates/jaxrsconsumer; \
 		icon="${rsimpl-icon}"; \
@@ -200,6 +200,7 @@ Bundle-Version: 1.5.0.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
-
--buildpath: org.osgi.service.metatype.annotations
 -privatepackage: org.eclipse.ecf.bndtools.templates.remoteservices
+-buildpath: \
+	osgi.cmpn,\
+	org.osgi.service.metatype.annotations
