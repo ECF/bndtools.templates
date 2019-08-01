@@ -1,0 +1,13 @@
+-buildpath: \
+	osgi.annotation;version=7.0,\
+	osgi.core;version=7.0,\
+	osgi.cmpn;version=7.0,\
+	$apipackage$;version=latest,\
+	jakarta.ws.rs-api
+
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 1.2.0.${tstamp}
+Private-Package: $basePackageName$
+
