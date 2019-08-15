@@ -1,0 +1,30 @@
+-runfw: org.eclipse.osgi;version=3.13
+-runee: JavaSE-1.8
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.scr)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
+	osgi.identity;filter:='(osgi.identity=$projectName$)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
+	bnd.identity;id='org.eclipse.ecf.provider.jms.hazelcast',\
+	bnd.identity;id='org.osgi.util.function',\
+	bnd.identity;id='org.osgi.util.promise',\
+    bnd.identity;id='org.apache.felix.gogo.runtime',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='org.apache.felix.gogo.command'
+
+-runproperties: osgi.console=,\
+				osgi.console.enable.builtin=false
+    
+-runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false
+	
+	
