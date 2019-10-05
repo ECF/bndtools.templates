@@ -217,6 +217,14 @@ launch-template-jgroups:\
 		category=${bndrun-category};\
 		dir=templates/launch/jgroups;\
 	    help=templates/jgroupsbndrun.xml
+	    
+launch-template-hazelcast2:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=Hazelcast Distribution Provider with Hazelcast Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/hazelcasthazelcast;\
+	    help=templates/hazelcast2bndrun.xml
+
 	
 javac.source: 1.8
 javac.target: 1.8
@@ -231,9 +239,9 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jaxrsjerseyserver},${launch-template-jaxrsjerseyclient},\
     ${launch-template-jaxrscxfserver},${launch-template-jaxrscxfclient},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
-    ${launch-template-jgroups}
+    ${launch-template-jgroups},${launch-template-hazelcast2}
     
-Bundle-Version: 1.6.3.${tstamp}
+Bundle-Version: 1.7.0.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
