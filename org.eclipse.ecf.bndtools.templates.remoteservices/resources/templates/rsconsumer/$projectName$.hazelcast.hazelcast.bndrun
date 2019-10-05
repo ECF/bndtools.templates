@@ -23,5 +23,4 @@
 	osgi.console.enable.builtin=false,\
 	osgi.console=
 
--runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false	
-
+-runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false
