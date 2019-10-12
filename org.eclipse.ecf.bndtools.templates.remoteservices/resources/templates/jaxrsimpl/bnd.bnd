@@ -2,7 +2,7 @@
 	osgi.annotation;version=7.0,\
 	osgi.core;version=7.0,\
 	osgi.cmpn;version=7.0,\
-	$apipackage$;version=latest,\
+	$api_package$;version=latest,\
 	jakarta.ws.rs-api
 
 -testpath: \

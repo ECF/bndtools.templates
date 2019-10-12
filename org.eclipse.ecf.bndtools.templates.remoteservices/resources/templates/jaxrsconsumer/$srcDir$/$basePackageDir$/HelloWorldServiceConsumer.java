@@ -1,7 +1,7 @@
 package $basePackageName$;
 
 import org.osgi.service.component.annotations.*;
-import $apipackage$.HelloWorldService;
+import $api_package$.HelloWorldService;
 
 @Component(immediate = true)
 public class HelloWorldServiceConsumer {

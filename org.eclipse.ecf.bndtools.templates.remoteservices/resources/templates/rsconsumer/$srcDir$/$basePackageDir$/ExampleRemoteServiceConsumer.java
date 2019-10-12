@@ -1,7 +1,7 @@
 package $basePackageName$;
 
 import org.osgi.service.component.annotations.*;
-import $apipackage$.ExampleRemoteService;
+import $api_package$.ExampleRemoteService;
 
 @Component(immediate=true)
 public class ExampleRemoteServiceConsumer {

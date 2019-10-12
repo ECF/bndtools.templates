@@ -3,7 +3,7 @@ package $basePackageName$;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import $apipackage$.HelloWorldService;
+import $api_package$.HelloWorldService;
 import org.osgi.service.component.annotations.Component;
 
 @Component(property = { "service.exported.interfaces=*", "service.exported.intents=jaxrs",

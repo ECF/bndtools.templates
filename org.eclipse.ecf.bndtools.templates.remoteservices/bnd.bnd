@@ -241,7 +241,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
     ${launch-template-jgroups},${launch-template-hazelcast2}
     
-Bundle-Version: 1.7.2.${tstamp}
+Bundle-Version: 1.8.0.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
