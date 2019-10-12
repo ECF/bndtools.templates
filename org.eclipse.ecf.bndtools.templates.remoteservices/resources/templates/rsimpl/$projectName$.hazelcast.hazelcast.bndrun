@@ -1,4 +1,4 @@
--runfw: org.apache.felix.framework;version='[5.6.10,5.6.10]'
+-runfw: org.eclipse.osgi;version=3.13
 -runee: JavaSE-1.8
 
 -resolve.effective: active;skip:="osgi.service"
