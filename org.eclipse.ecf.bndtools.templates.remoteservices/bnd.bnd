@@ -51,7 +51,7 @@ jaxrsimpl-template:\
 		dir=templates/jaxrsimpl; \
 		icon="${rsimpl-icon}"; \
 		help=templates/jaxrsimplhelp.xml; \
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
 
 impl-async-template:\
  	org.bndtools.template;\
@@ -71,7 +71,7 @@ consumer-template:\
 		dir=templates/rsconsumer; \
 		icon="${rsimpl-icon}"; \
 		help=templates/rsconsumerhelp.xml; \
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.consumer.xml
 
 jaxrsconsumer-template:\
  	org.bndtools.template;\
@@ -81,7 +81,7 @@ jaxrsconsumer-template:\
 		dir=templates/jaxrsconsumer; \
 		icon="${rsimpl-icon}"; \
 		help=templates/jaxrsconsumerhelp.xml; \
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.xml
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.consumer.xml
 		
 consumer-async-template:\
  	org.bndtools.template;\
@@ -91,7 +91,7 @@ consumer-async-template:\
 		dir=templates/rsconsumerasync; \
 		icon="${rsimpl-icon}"; \
 		help=templates/rsconsumerhelpasync.xml; \
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.consumer.xml
 
 python-hello-examples-template:\
  	org.bndtools.template;\
@@ -163,7 +163,7 @@ launch-template-jaxrsjerseyserver:\
 		name=JaxRS Jersey Server Distribution Provider with Zeroconf Discovery;\
 		category=${bndrun-category};\
 		dir=templates/launch/jaxrsjerseyserver;\
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml;\
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.host.xml;\
 	    help=templates/jaxrsjerseyserverbndrun.xml
 
 launch-template-jaxrsjerseyclient:\
@@ -171,7 +171,7 @@ launch-template-jaxrsjerseyclient:\
 		name=JaxRS Jersey Client Distribution Provider with Zeroconf Discovery;\
 		category=${bndrun-category};\
 		dir=templates/launch/jaxrsjerseyclient;\
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml;\
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.consumer.xml;\
 	    help=templates/jaxrsjerseyclientbndrun.xml
 		
 launch-template-jaxrscxfserver:\
@@ -179,7 +179,7 @@ launch-template-jaxrscxfserver:\
 		name=JaxRS CXF Server Distribution Provider with Zeroconf Discovery;\
 		category=${bndrun-category};\
 		dir=templates/launch/jaxrscxfserver;\
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml;\
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.host.xml;\
 	    help=templates/jaxrscxfserverbndrun.xml
 
 launch-template-jaxrscxfclient:\
@@ -187,7 +187,7 @@ launch-template-jaxrscxfclient:\
 		name=JaxRS CXF Client Distribution Provider with Zeroconf Discovery;\
 		category=${bndrun-category};\
 		dir=templates/launch/jaxrscxfclient;\
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.xml;\
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.consumer.xml;\
 	    help=templates/jaxrscxfclientbndrun.xml
 
 launch-template-activemq:\
@@ -241,7 +241,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
     ${launch-template-jgroups},${launch-template-hazelcast2}
     
-Bundle-Version: 1.8.0.${tstamp}
+Bundle-Version: 1.8.1.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
