@@ -225,6 +225,19 @@ launch-template-hazelcast2:\
 		dir=templates/launch/hazelcasthazelcast;\
 	    help=templates/hazelcast2bndrun.xml
 
+launch-template-dubboserver:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=Dubbo Server Distribution Provider with Hazelcast Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/dubboserver;\
+	    help=templates/dubboserverbndrun.xml
+
+launch-template-dubboclient:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=Dubbo Client Distribution Provider with Hazelcast Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/dubboclient;\
+	    help=templates/dubboclientbndrun.xml
 	
 javac.source: 1.8
 javac.target: 1.8
@@ -239,9 +252,10 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jaxrsjerseyserver},${launch-template-jaxrsjerseyclient},\
     ${launch-template-jaxrscxfserver},${launch-template-jaxrscxfclient},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
-    ${launch-template-jgroups},${launch-template-hazelcast2}
+    ${launch-template-jgroups},${launch-template-hazelcast2},${launch-template-dubboserver},\
+    ${launch-template-dubboclient}
     
-Bundle-Version: 1.8.3.${tstamp}
+Bundle-Version: 1.9.0.${tstamp}
 
 -resourceonly: true
 -includeresource: resources

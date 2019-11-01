@@ -15,3 +15,4 @@ javac.target: $javaLevel$
 $endif$
 
 Bundle-Version: 1.2.0.\${tstamp}
+Export-Package: $projectName$
