@@ -27,7 +27,7 @@
     
 -runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false \
 	\n\
-	-Decf.discovery.etcd.hostname=disco.ecf-project.org \
+	-Decf.discovery.etcd.hostname=localhost \
 	\n\
 	-Dorg.eclipse.ecf.core.util.traceBundles=org.eclipse.ecf.provider.etcd \
 	\n\

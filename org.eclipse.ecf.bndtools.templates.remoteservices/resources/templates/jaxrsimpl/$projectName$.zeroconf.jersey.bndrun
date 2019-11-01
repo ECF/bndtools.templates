@@ -16,7 +16,8 @@ osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
 	bnd.identity;id='org.apache.felix.http.jetty'
 	
 -runproperties: osgi.console=,\
-				osgi.console.enable.builtin=false
+				osgi.console.enable.builtin=false,\
+				org.osgi.service.http.port=8181
     
 -runfw: org.eclipse.osgi;version=3.13
 -runee: JavaSE-1.8

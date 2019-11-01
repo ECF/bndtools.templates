@@ -8,7 +8,7 @@ public @interface ConsumerTemplateMeta {
 
 	public static final String NAME = "Remote Service Consumer Project Template";
 
-	@AttributeDefinition(name = "API Package/Project", description = "The package in a previously-created project where the service interface exists.  Must be created prior to creating this project.  A suitable API project can be created via the Remote Service API project template")
+	@AttributeDefinition(name = "API Package/Project", description = "Previously-created API Package/Project. A project can be created via one of the API project templates")
 	String api__package() default "replace.this.with.your.api.package";
 
 }
