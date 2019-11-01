@@ -8,7 +8,7 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
-	osgi.identity;filter:='(osgi.identity=rs.impl)',\
+	osgi.identity;filter:='(osgi.identity=$projectName$)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
 	bnd.identity;id='org.osgi.util.function',\
 	bnd.identity;id='org.osgi.util.promise',\
