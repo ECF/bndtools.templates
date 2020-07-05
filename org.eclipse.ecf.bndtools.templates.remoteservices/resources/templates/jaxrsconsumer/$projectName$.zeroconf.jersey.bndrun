@@ -18,5 +18,7 @@ osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
 				osgi.console.enable.builtin=false
     
 -runfw: org.eclipse.osgi;version=3.13
--runee: JavaSE-1.8
+
+-resolve: auto
 	
+-runee: JavaSE-$javaLevel$

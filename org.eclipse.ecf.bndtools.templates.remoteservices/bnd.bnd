@@ -255,7 +255,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jgroups},${launch-template-hazelcast2},${launch-template-dubboserver},\
     ${launch-template-dubboclient}
     
-Bundle-Version: 1.9.1.${tstamp}
+Bundle-Version: 1.9.2.${tstamp}
 
 -resourceonly: true
 -includeresource: resources

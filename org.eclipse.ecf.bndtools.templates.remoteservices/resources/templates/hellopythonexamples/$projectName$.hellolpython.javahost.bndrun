@@ -1,5 +1,5 @@
 -runfw: org.eclipse.osgi;version=3.13
--runee: JavaSE-1.8
+-runee: JavaSE-$javaLevel$
 
 -resolve.effective: active;skip:="osgi.service"
 

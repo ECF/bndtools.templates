@@ -1,8 +1,10 @@
 package $basePackageName$;
 
+import java.util.concurrent.CompletableFuture;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 
 /**
  * This is an example jaxrs remote service declaration. This service interface is
@@ -19,6 +21,10 @@ public interface HelloWorldService {
 
 	@GET
 	@Path("/hello")
-	@Produces("text/plain")
-	String getMessage();
+	String getMessage(@QueryParam("fromMessage") String fromMessage);
+
+	@GET
+	@Path("/helloasync")
+	CompletableFuture<String> getMessageAsync(@QueryParam("fromMessage") String fromMessage);
+
 }
