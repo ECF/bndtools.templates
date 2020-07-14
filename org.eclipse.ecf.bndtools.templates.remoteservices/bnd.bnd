@@ -239,13 +239,37 @@ launch-template-dubboclient:\
 		dir=templates/launch/dubboclient;\
 	    help=templates/dubboclientbndrun.xml
 	
+launch-template-healthserver:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=gRPC Health Service Example Service with Zeroconf Discovery;\
+		category=${bndrun-examples-category};\
+		dir=templates/launch/grpchealthserver;\
+	    help=templates/grpchealthserver.xml
+
+launch-template-healthconsumer:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=gRPC Health Service Example Consumer with Zeroconf Discovery;\
+		category=${bndrun-examples-category};\
+		dir=templates/launch/grpchealthconsumer;\
+	    help=templates/grpchealthconsumer.xml
+
+grpchealth-examples-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=gRPC Health Remote Service Examples; \
+		category=${project-category}; \
+		dir=templates/grpchealthexamples; \
+		icon="${rsimpl-icon}"; \
+		help=templates/grpchealthexamples.xml
+
 javac.source: 1.8
 javac.target: 1.8
 
 Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${jaxrsimpl-template},${consumer-template},${jaxrsconsumer-template},\
     ${api-async-template},${impl-async-template},${consumer-async-template},\
-    ${python-hello-examples-template},${launch-template-generic},\
+    ${grpchealth-examples-template},${python-hello-examples-template},\
+    ${launch-template-generic},\
     ${launch-template-generic-etcd},${launch-template-rosgi},\
     ${launch-template-rosgi-etcd},${launch-template-xmlrpc},${launch-template-xmlrpc-etcd},\
     ${launch-template-pythonjavahello},${launch-template-pythonjavaprotobufhello},\
@@ -253,9 +277,9 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jaxrscxfserver},${launch-template-jaxrscxfclient},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
     ${launch-template-jgroups},${launch-template-hazelcast2},${launch-template-dubboserver},\
-    ${launch-template-dubboclient}
+    ${launch-template-dubboclient},${launch-template-healthserver},${launch-template-healthconsumer}
     
-Bundle-Version: 1.9.2.${tstamp}
+Bundle-Version: 1.9.3.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
