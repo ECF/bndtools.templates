@@ -23,3 +23,5 @@ osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
 -runee: JavaSE-$javaLevel$
 
 -resolve: auto
+
+-runblacklist: bnd.identity;id='org.apache.aries.javax.jax.rs-api'

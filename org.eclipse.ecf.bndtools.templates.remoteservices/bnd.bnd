@@ -279,7 +279,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jgroups},${launch-template-hazelcast2},${launch-template-dubboserver},\
     ${launch-template-dubboclient},${launch-template-healthserver},${launch-template-healthconsumer}
     
-Bundle-Version: 1.9.3.${tstamp}
+Bundle-Version: 1.9.4.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
