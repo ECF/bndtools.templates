@@ -253,7 +253,7 @@ launch-template-healthconsumer:\
 		dir=templates/launch/grpchealthconsumer;\
 	    help=templates/grpchealthconsumer.xml
 
-grpchealth-examples-template:\
+grpc-health-examples-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=gRPC Health Remote Service Examples; \
@@ -262,13 +262,24 @@ grpchealth-examples-template:\
 		icon="${rsimpl-icon}"; \
 		help=templates/grpchealthexamples.xml
 
+grpc-apigenerated-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=gRPC API Project (protoc code gen); \
+		category=${project-category}; \
+		dir=templates/grpcapigenerated; \
+		icon="${rsimpl-icon}"; \
+		help=templates/grpcapigenerated.xml
+
 javac.source: 1.8
 javac.target: 1.8
 
 Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${jaxrsimpl-template},${consumer-template},${jaxrsconsumer-template},\
     ${api-async-template},${impl-async-template},${consumer-async-template},\
-    ${grpchealth-examples-template},${python-hello-examples-template},\
+    ${grpc-health-examples-template},\
+    ${grpc-apigenerated-template},\
+    ${python-hello-examples-template},\
     ${launch-template-generic},\
     ${launch-template-generic-etcd},${launch-template-rosgi},\
     ${launch-template-rosgi-etcd},${launch-template-xmlrpc},${launch-template-xmlrpc-etcd},\
@@ -279,7 +290,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jgroups},${launch-template-hazelcast2},${launch-template-dubboserver},\
     ${launch-template-dubboclient},${launch-template-healthserver},${launch-template-healthconsumer}
     
-Bundle-Version: 1.9.4.${tstamp}
+Bundle-Version: 1.10.1.${tstamp}
 
 -resourceonly: true
 -includeresource: resources

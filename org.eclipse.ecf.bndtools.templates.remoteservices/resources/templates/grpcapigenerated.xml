@@ -1,0 +1,5 @@
+<form>
+<p>This template will create a project containing a proto3 file (in proto/health.proto).</p>
+<p>The bndtools proto code generation will read this proto file and generate the java code</p>
+<p>for the service defined in the proto file into src-gen directory</p>
+</form>
