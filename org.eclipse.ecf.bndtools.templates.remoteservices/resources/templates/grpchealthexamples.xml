@@ -1,8 +1,0 @@
-<form>
-<p>This template will create a project with two bndrun files that launch the gRPC health example </p>
-<p> server and consumer applications.</p>
-<p>The api is exposed by the <a href="https://github.com/ECF/grpc-RemoteServicesProvider/tree/master/examples/org.eclipse.ecf.examples.provider.grpc.health.api">org.eclipse.ecf.examples.provider.grpc.health.api</a> project.</p>
-<p>The API/source for this project was created by generating the java code from a file <a href="https://github.com/ECF/grpc-RemoteServicesProvider/blob/master/examples/org.eclipse.ecf.examples.provider.grpc.health.api/src/main/proto/health.proto">health.proto</a>.</p>
-<p>The <a href="https://github.com/ECF/grpc-RemoteServicesProvider/tree/master/examples/org.eclipse.ecf.examples.provider.grpc.health.impl">server</a> and <a href="https://github.com/ECF/grpc-RemoteServicesProvider/tree/master/examples/org.eclipse.ecf.examples.provider.grpc.health.consumer">consumer</a> projects were completed by hand.</p>
-<p>More complete documentation for how this example was created is available <a href="https://github.com/ECF/grpc-RemoteServicesProvider">here</a></p>
-</form>

@@ -211,13 +211,6 @@ launch-template-mqtt:\
 		dir=templates/launch/mqtt;\
 	    help=templates/mqttbndrun.xml
 
-launch-template-jgroups:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=JGroups Distribution Provider with Zeroconf Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/jgroups;\
-	    help=templates/jgroupsbndrun.xml
-	    
 launch-template-hazelcast2:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
 		name=Hazelcast Distribution Provider with Hazelcast Discovery;\
@@ -225,47 +218,10 @@ launch-template-hazelcast2:\
 		dir=templates/launch/hazelcasthazelcast;\
 	    help=templates/hazelcast2bndrun.xml
 
-launch-template-dubboserver:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=Dubbo Server Distribution Provider with Hazelcast Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/dubboserver;\
-	    help=templates/dubboserverbndrun.xml
-
-launch-template-dubboclient:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=Dubbo Client Distribution Provider with Hazelcast Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/dubboclient;\
-	    help=templates/dubboclientbndrun.xml
-	
-launch-template-healthserver:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=gRPC Health Service Example Service with Zeroconf Discovery;\
-		category=${bndrun-examples-category};\
-		dir=templates/launch/grpchealthserver;\
-	    help=templates/grpchealthserver.xml
-
-launch-template-healthconsumer:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=gRPC Health Service Example Consumer with Zeroconf Discovery;\
-		category=${bndrun-examples-category};\
-		dir=templates/launch/grpchealthconsumer;\
-	    help=templates/grpchealthconsumer.xml
-
-grpc-health-examples-template:\
- 	org.bndtools.template;\
-		org.bndtools.template=project; \
-		name=gRPC Health Remote Service Examples; \
-		category=${project-category}; \
-		dir=templates/grpchealthexamples; \
-		icon="${rsimpl-icon}"; \
-		help=templates/grpchealthexamples.xml
-
 grpc-apigenerated-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=gRPC API Project (protoc code gen); \
+		name=gRPC Protoc-Generated API Project; \
 		category=${project-category}; \
 		dir=templates/grpcapigenerated; \
 		icon="${rsimpl-icon}"; \
@@ -277,7 +233,6 @@ javac.target: 1.8
 Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${jaxrsimpl-template},${consumer-template},${jaxrsconsumer-template},\
     ${api-async-template},${impl-async-template},${consumer-async-template},\
-    ${grpc-health-examples-template},\
     ${grpc-apigenerated-template},\
     ${python-hello-examples-template},\
     ${launch-template-generic},\
@@ -287,10 +242,9 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jaxrsjerseyserver},${launch-template-jaxrsjerseyclient},\
     ${launch-template-jaxrscxfserver},${launch-template-jaxrscxfclient},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
-    ${launch-template-jgroups},${launch-template-hazelcast2},${launch-template-dubboserver},\
-    ${launch-template-dubboclient},${launch-template-healthserver},${launch-template-healthconsumer}
+    ${launch-template-hazelcast2}
     
-Bundle-Version: 1.10.1.${tstamp}
+Bundle-Version: 1.11.0.${tstamp}
 
 -resourceonly: true
 -includeresource: resources

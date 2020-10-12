@@ -1,5 +1,9 @@
 <form>
-<p>This template will create a project containing a proto3 file (in proto/health.proto).</p>
-<p>The bndtools proto code generation will read this proto file and generate the java code</p>
-<p>for the service defined in the proto file into src-gen directory</p>
+<p>This template will create a project with an example proto3 file (in protofiles/health.proto).</p>
+<p>The protoc code generation (added to bnd/bndtools by maven central given by </p>
+<p>org.eclipse.ecf:org.eclipse.ecf.bndtools.grpc:1.0.2.  This generator will read the health.proto</p>
+<p>file and generate the protobuf, grpc, and reactivex java code for the service as part of either</p>
+<p>an incremental or whole project builds.</p>
+<p>Protoc-generated java code will be output to the src-gen directory and subsequently compiled, packaged,</p>
+<p>etc. by bndtools.</p>
 </form>
