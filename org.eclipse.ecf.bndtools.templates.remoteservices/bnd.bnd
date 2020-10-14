@@ -221,11 +221,31 @@ launch-template-hazelcast2:\
 grpc-apigenerated-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=gRPC Protoc-Generated API Project; \
+		name=gRPC Protoc-Generated HealthCheck API Project; \
 		category=${project-category}; \
 		dir=templates/grpcapigenerated; \
 		icon="${rsimpl-icon}"; \
 		help=templates/grpcapigenerated.xml
+
+grpc-apigenerated-impl-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=gRPC Protoc-Generated HealthCheck Impl Project; \
+		category=${project-category}; \
+		dir=templates/grpcapigeneratedimpl; \
+		icon="${rsimpl-icon}"; \
+		help=templates/grpcapigeneratedimpl.xml; \
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
+
+grpc-apigenerated-consumer-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=gRPC Protoc-Generated HealthCheck Consumer Project; \
+		category=${project-category}; \
+		dir=templates/grpcapigeneratedconsumer; \
+		icon="${rsimpl-icon}"; \
+		help=templates/grpcapigeneratedconsumer.xml; \
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
 
 javac.source: 1.8
 javac.target: 1.8
@@ -234,6 +254,8 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${jaxrsimpl-template},${consumer-template},${jaxrsconsumer-template},\
     ${api-async-template},${impl-async-template},${consumer-async-template},\
     ${grpc-apigenerated-template},\
+    ${grpc-apigenerated-impl-template},\
+    ${grpc-apigenerated-consumer-template},\
     ${python-hello-examples-template},\
     ${launch-template-generic},\
     ${launch-template-generic-etcd},${launch-template-rosgi},\
@@ -244,7 +266,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
     ${launch-template-hazelcast2}
     
-Bundle-Version: 1.11.0.${tstamp}
+Bundle-Version: 1.12.2.${tstamp}
 
 -resourceonly: true
 -includeresource: resources
