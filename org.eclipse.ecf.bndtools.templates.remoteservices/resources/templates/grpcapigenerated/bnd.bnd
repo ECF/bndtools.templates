@@ -1,5 +1,6 @@
 src = src-gen, src
 
+# use GrpcGenerator to generate code to src-gen using protofiles dir and protofiles/health.proto file
 -generate \
     protofiles; \
         output = src-gen; \
@@ -17,4 +18,7 @@ src = src-gen, src
 	io.grpc:grpc-context;version='1.31',\
 	io.reactivex.rxjava2:rxjava;version='2.2.19'
 
-Export-Package: $basePackageName$
+package-version = 1.0.0
+Bundle-Version: \${package-version}.\${tstamp}
+
+Export-Package: $basePackageName$;version="\${package-version}"

@@ -265,8 +265,10 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jaxrscxfserver},${launch-template-jaxrscxfclient},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
     ${launch-template-hazelcast2}
-    
-Bundle-Version: 1.12.2.${tstamp}
+
+package-version = 1.12.3
+bundle-version = ${package-version}.${tstamp}
+Bundle-Version: ${bundle-version}
 
 -resourceonly: true
 -includeresource: resources
