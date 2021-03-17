@@ -16,7 +16,7 @@ import java.util.concurrent.CompletableFuture;
  * for tutorials on declaring, implementing, and testing OSGi Remote Services
  * </p>
  */
-public interface ExampleAsyncRemoteService {
+public interface HelloAsyncService {
 
 	CompletableFuture<String> hello(String from);
 
