@@ -23,7 +23,7 @@ public class HelloAsyncServiceConsumer {
 			if (exception != null)
 				exception.printStackTrace();
 			else 
-				System.out.println("helloasync service responds: "+result);
+				System.out.println("HelloAsyncService responds: "+result);
 		});
 	}
 	
