@@ -1,7 +1,7 @@
 -buildpath: \
 	osgi.annotation;version='7.0',\
-	osgi.cmpn;version='7.0',\
-	org.apache.felix.gogo.runtime;version="1.1.4",\
+	org.apache.felix.gogo.runtime;version='1.1.4',\
+	org.osgi.service.component.annotations,\
 	$api_package$
 
 $if(javaLevel)$
