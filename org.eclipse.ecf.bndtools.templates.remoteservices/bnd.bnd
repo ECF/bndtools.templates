@@ -71,7 +71,7 @@ Provide-Capability: ${api-template},${api-async-template},\
     ${impl-template},${impl-async-template},\
     ${consumer-template},${consumer-async-template}
 
-package-version = 1.212.4
+package-version = 1.12.4
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
