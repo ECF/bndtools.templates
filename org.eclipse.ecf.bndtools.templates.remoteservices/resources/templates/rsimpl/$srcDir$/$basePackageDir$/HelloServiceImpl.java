@@ -5,12 +5,12 @@ import org.osgi.service.component.propertytypes.ExportedService;
 
 import $api_package$.HelloService;
 
-@Component(name="HelloServiceImpl",service = HelloService.class)
+@Component
 //The following will export using the ecf.generic.server distribution provider
 @ExportedService(service_exported_interfaces = HelloService.class, service_exported_configs = "$service_exported_config$")
 //Note that that the provider identified by the service exported config value must be
-//present in the runtime at the time of service registration
-//See additional examples and documentation for use of other providers below
+//present in the runtime (bndrun) at the time of service registration for it to be
+//exported
 public class HelloServiceImpl implements HelloService {
 
 	public String hello(String name) {
