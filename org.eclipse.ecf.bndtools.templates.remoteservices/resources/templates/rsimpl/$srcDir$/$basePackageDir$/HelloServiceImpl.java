@@ -14,7 +14,6 @@ import $api_package$.HelloService;
 public class HelloServiceImpl implements HelloService {
 
 	public String hello(String name) {
-		System.out.println("HelloServiceImpl.hello called with name=" + name);
 		return "Hello " + name;
 	}
 
