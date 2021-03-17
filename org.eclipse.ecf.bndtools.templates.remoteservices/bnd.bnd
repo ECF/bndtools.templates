@@ -64,12 +64,20 @@ consumer-async-template:\
 		help=templates/rsconsumerhelpasync.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.consumer.xml
 
+aunch-template-generic:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=Generic Distribution Provider with Zeroconf Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/generic;\
+	    help=templates/genericbndrun.xml
+
 javac.source: 1.8
 javac.target: 1.8
 
 Provide-Capability: ${api-template},${api-async-template},\
     ${impl-template},${impl-async-template},\
-    ${consumer-template},${consumer-async-template}
+    ${consumer-template},${consumer-async-template},\
+    ${launch-template-generic}
 
 package-version = 1.212.4
 bundle-version = ${package-version}.${tstamp}

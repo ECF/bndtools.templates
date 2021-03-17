@@ -1,13 +1,7 @@
 -buildpath: \
-	osgi.annotation;version=7.0,\
-	osgi.core;version=7.0,\
-	osgi.cmpn;version=7.0,\
+	osgi.annotation;version='7.0',\
+	osgi.cmpn;version="7.0",\
 	$api_package$;version=latest
-
--testpath: \
-	\${junit},\
-	\${mockito},\
-	\${mockito-deps}
 
 $if(javaLevel)$
 javac.source: $javaLevel$
@@ -15,4 +9,3 @@ javac.target: $javaLevel$
 $endif$
 
 Bundle-Version: 1.2.0.\${tstamp}
-Export-Package: $projectName$

@@ -5,19 +5,20 @@ import org.osgi.service.component.propertytypes.ExportedService;
 
 import java.util.concurrent.CompletableFuture;
 
-import $api_package$.ExampleAsyncRemoteService;
+import $api_package$.HelloAsyncService;
 
-//Class is a component, registered immediately as ExampleRemoteService
-@Component(immediate=true, service = ExampleAsyncRemoteService.class)
+@Component
 //The following will export using the ecf.generic.server distribution provider
-@ExportedService(service_exported_interfaces = ExampleAsyncRemoteService.class, service_exported_configs = "$service_exported_config$")
+@ExportedService(service_exported_interfaces = HelloAsyncService.class, 
+service_exported_configs = "ecf.generic.server", 
+service_exported_intents = { "osgi.basic", "osgi.async" })
 //Note that that the provider identified by the service exported config value must be
 //present in the runtime at the time of service registration
 //See additional examples and documentation for use of other providers below
-public class ExampleAsyncRemoteServiceImpl implements ExampleAsyncRemoteService {
+public class HelloAsyncServiceImpl implements HelloAsyncService {
 
     public CompletableFuture<String> hello(String from) {
-        System.out.println("ExampleRemoteServiceImpl.hello called from="+from);
+        System.out.println("HelloAsyncServiceImpl.hello called from="+from);
         CompletableFuture<String> cf = new CompletableFuture<String>();
         cf.complete("Hello "+from);
         return cf;
