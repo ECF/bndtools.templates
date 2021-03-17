@@ -15,8 +15,9 @@
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.remoteservice)',\
 	osgi.identity;filter:='(osgi.identity=$projectName$)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
+    osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.r_osgi)',\
 	bnd.identity;id='org.osgi.util.function',\
 	bnd.identity;id='org.osgi.util.promise',\
     bnd.identity;id='org.apache.felix.gogo.runtime',\
@@ -25,9 +26,9 @@
 
 -runproperties: osgi.console=,\
 				osgi.console.enable.builtin=false
-    
+		
 -runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false \
 	\n\
-	-Dorg.eclipse.ecf.osgi.service.remoteserviceadmin.hostcontainerselector.excludeddescriptions="ecf.generic.client,ecf.generic.ssl.server,ecf.generic.ssl.client"
+	-Dorg.eclipse.ecf.osgi.service.remoteserviceadmin.hostcontainerselector.excludeddescriptions="ecf.r_osgi.peer.ws,ecf.r_osgi.peer.wss,ecf.generic.server,ecf.generic.client,ecf.generic.ssl.server,ecf.generic.ssl.client"
 
 	

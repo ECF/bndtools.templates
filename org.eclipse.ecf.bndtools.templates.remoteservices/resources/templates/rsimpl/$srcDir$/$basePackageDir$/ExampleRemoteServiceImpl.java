@@ -3,18 +3,19 @@ package $basePackageName$;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.propertytypes.ExportedService;
 
-import $api_package$.HelloService;
+import $api_package$.ExampleRemoteService;
 
-@Component(name="HelloServiceImpl",service = HelloService.class)
+//Class is a component, registered immediately as ExampleRemoteService
+@Component(immediate=true, service = ExampleRemoteService.class)
 //The following will export using the ecf.generic.server distribution provider
-@ExportedService(service_exported_interfaces = HelloService.class, service_exported_configs = "$service_exported_config$")
+@ExportedService(service_exported_interfaces = ExampleRemoteService.class, service_exported_configs = "$service_exported_config$")
 //Note that that the provider identified by the service exported config value must be
 //present in the runtime at the time of service registration
 //See additional examples and documentation for use of other providers below
-public class HelloServiceImpl implements HelloService {
+public class ExampleRemoteServiceImpl implements ExampleRemoteService {
 
 	public String hello(String name) {
-		System.out.println("HelloServiceImpl.hello called with name=" + name);
+		System.out.println("ExampleRemoteServiceImpl.hello called with name=" + name);
 		return "Hello " + name;
 	}
 

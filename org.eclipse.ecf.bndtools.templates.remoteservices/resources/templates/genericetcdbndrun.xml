@@ -1,0 +1,7 @@
+<form><p>This template will create a bndrun for launching a framework uusing the <b>ECF Generic Distribution Provider and Etcd Discovery</b></p>
+<p>Source code repo for this distribution provider see: <a href="https://wiki.eclipse.org/ECF">https://wiki.eclipse.org/ECF</a></p>
+<p>Once created, you can resolve the run requirements by clicking the <b>Resolve</b> button the the right-hand side of the bndrun editor.</p>
+<p>Once resolved, you can click on <b>Run OSGi</b> or <b>Debug OSGi</b> buttons in the upper right hand side of the bndrun editor to launch.</p>
+<p>This will produce output to the OSGi console to show either the export of the remote service (impl), or the discovery and import and calling</p>
+<p> of the remote service (consumer).</p>
+</form>

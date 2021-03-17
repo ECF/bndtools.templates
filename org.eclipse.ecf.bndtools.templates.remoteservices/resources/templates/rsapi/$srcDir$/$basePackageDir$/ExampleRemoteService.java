@@ -23,7 +23,7 @@ package $basePackageName$;
  * for tutorials on declaring, implementing, and testing OSGi Remote Services
  * </p>
  */
-public interface HelloService {
+public interface ExampleRemoteService {
 
 	String hello(String from);
 	

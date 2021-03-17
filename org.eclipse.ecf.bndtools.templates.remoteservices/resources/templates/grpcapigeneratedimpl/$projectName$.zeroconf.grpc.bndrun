@@ -1,0 +1,46 @@
+-runfw: org.eclipse.osgi;version=3.13
+-runee: JavaSE-$javaLevel$
+
+-resolve: auto
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=$projectName$)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.scr)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
+	bnd.identity;id='org.osgi.util.function',\
+	bnd.identity;id='org.osgi.util.promise',\
+	bnd.identity;id='org.apache.felix.gogo.runtime',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='org.apache.felix.gogo.command',\
+	bnd.identity;id='org.eclipse.ecf.provider.grpc',\
+	bnd.identity;id='com.google.guava',\
+	bnd.identity;id='com.google.guava.failureaccess',\
+	bnd.identity;id='com.google.gson',\
+	bnd.identity;id='com.salesforce.servicelibs.reactive-grpc-common',\
+	bnd.identity;id='com.salesforce.servicelibs.rxgrpc-stub',\
+	bnd.identity;id='io.netty.buffer',\
+	bnd.identity;id='io.netty.codec',\
+	bnd.identity;id='io.netty.codec-http',\
+	bnd.identity;id='io.netty.codec-http2',\
+	bnd.identity;id='io.netty.codec-socks',\
+	bnd.identity;id='io.netty.common',\
+	bnd.identity;id='io.netty.handler',\
+	bnd.identity;id='io.netty.handler-proxy',\
+	bnd.identity;id='io.netty.resolver',\
+	bnd.identity;id='io.netty.transport',\
+	bnd.identity;id='io.reactivex.rxjava2.rxjava',\
+	bnd.identity;id='org.reactivestreams.reactive-streams'
+	
+-runproperties: osgi.console=,\
+				osgi.console.enable.builtin=false
+
+-runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false

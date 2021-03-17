@@ -14,9 +14,13 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.remoteservice)',\
-	osgi.identity;filter:='(osgi.identity=$projectName$)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
+	bnd.identity;id='org.eclipse.ecf.examples.hello',\
+	bnd.identity;id='org.eclipse.ecf.examples.hello.javahost',\
+	bnd.identity;id='org.eclipse.ecf.examples.hello.provider',\
+	bnd.identity;id='org.slf4j.api',\
+	bnd.identity;id='org.slf4j.apis.log4j',\
+	bnd.identity;id='org.apache.log4j',\
 	bnd.identity;id='org.osgi.util.function',\
 	bnd.identity;id='org.osgi.util.promise',\
     bnd.identity;id='org.apache.felix.gogo.runtime',\
@@ -26,8 +30,5 @@
 -runproperties: osgi.console=,\
 				osgi.console.enable.builtin=false
     
--runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false \
-	\n\
-	-Dorg.eclipse.ecf.osgi.service.remoteserviceadmin.hostcontainerselector.excludeddescriptions="ecf.generic.client,ecf.generic.ssl.server,ecf.generic.ssl.client"
-
+-runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false
 	
