@@ -1,11 +1,14 @@
 -buildpath: \
 	osgi.annotation;version='7.0',\
-	osgi.cmpn;version="7.0",\
-	$api_package$;version=latest
+	$api_package$;version=latest,\
+	org.osgi.service.component.annotations,\
+	org.osgi.service.component
+
+Bundle-Version: 1.0.0.\${tstamp}
 
 $if(javaLevel)$
-javac.source: $javaLevel$
-javac.target: $javaLevel$
+javac.source=$javaLevel$
+javac.target=$javaLevel$
+javac.compliance=$javaLevel$
 $endif$
 
-Bundle-Version: 1.2.0.\${tstamp}

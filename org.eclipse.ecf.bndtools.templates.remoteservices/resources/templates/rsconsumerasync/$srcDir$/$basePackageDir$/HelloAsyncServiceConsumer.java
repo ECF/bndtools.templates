@@ -7,8 +7,8 @@ import org.osgi.service.component.annotations.Reference;
 import org.apache.felix.service.command.annotations.GogoCommand;
 import $api_package$.HelloAsyncService;
 
-@Component(service=HelloAsyncServiceConsumer.class)
-@GogoCommand(scope="consumer", function="helloasync")
+@Component(service = HelloAsyncServiceConsumer.class)
+@GogoCommand(scope = "consumer", function = "helloasync")
 public class HelloAsyncServiceConsumer {
 
 	private HelloAsyncService helloService;
@@ -19,14 +19,12 @@ public class HelloAsyncServiceConsumer {
 	}
 
 	public void helloasync(String from) {
-		helloService.hello(from).whenComplete((result,exception) -> {
+		helloService.hello(from).whenComplete((result, exception) -> {
 			if (exception != null)
 				exception.printStackTrace();
-			else 
-				System.out.println("HelloAsyncService responds: "+result);
+			else
+				System.out.println("HelloAsyncService responds: " + result);
 		});
 	}
-	
+
 }
-
-

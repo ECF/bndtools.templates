@@ -1,7 +1,7 @@
--runfw: org.eclipse.osgi;version=3.13
+-runfw: org.apache.felix.framework;version="7.0"
 -runee: JavaSE-$javaLevel$
 
--resolve.effective: active
+-resolve.effective: active;skip:="osgi.service"
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.remoteservice)',\
@@ -12,15 +12,5 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	bnd.identity;id='org.apache.felix.eventadmin',\
-	bnd.identity;id='org.osgi.util.function',\
-	bnd.identity;id='org.osgi.util.promise',\
 	osgi.identity;filter:='(osgi.identity=$projectName$)'
-	
--runproperties: osgi.console=,\
-				osgi.console.enable.builtin=false
-    
--runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false \
-	\n\
-	-Dorg.eclipse.ecf.osgi.service.remoteserviceadmin.hostcontainerselector.excludeddescriptions="ecf.generic.client,ecf.generic.ssl.server,ecf.generic.ssl.client"
-
 	

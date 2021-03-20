@@ -7,8 +7,8 @@ import org.osgi.service.component.annotations.Reference;
 import org.apache.felix.service.command.annotations.GogoCommand;
 import $api_package$.HelloService;
 
-@Component(service=HelloServiceConsumer.class)
-@GogoCommand(scope="consumer", function="hello")
+@Component(service = HelloServiceConsumer.class)
+@GogoCommand(scope = "consumer", function = "hello")
 public class HelloServiceConsumer {
 
 	private HelloService hello;
@@ -18,8 +18,8 @@ public class HelloServiceConsumer {
 		this.hello = hello;
 	}
 
-	public String hello( String name) {
+	public String hello(String name) {
 		return hello.hello(name);
 	}
-	
+
 }
