@@ -4,9 +4,11 @@
 	org.osgi.service.component.annotations,\
 	$api_package$
 
+Bundle-Version: 1.0.0.\${tstamp}
+
 $if(javaLevel)$
-javac.source: $javaLevel$
-javac.target: $javaLevel$
+javac.source=$javaLevel$
+javac.target=$javaLevel$
+javac.compliance=$javaLevel$
 $endif$
 
-Bundle-Version: 1.1.0.\${tstamp}
