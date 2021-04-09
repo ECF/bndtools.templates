@@ -7,16 +7,22 @@ src = src-gen, src
         generate = "org.eclipse.ecf.bndtools.grpc.GrpcGenerator -I=protofiles --java_out=src-gen health.proto 2>protoc.errors"
            
 -buildpath: \
-    org.apache.tomcat:annotations-api;version=6.0.53,\
-    com.google.protobuf:protobuf-java;version=4.0.0.rc-2,\
-    com.google.guava:guava;version=26.0.0.android,\
-	com.salesforce.servicelibs:rxgrpc-stub;version=1.0.1,\
-	com.salesforce.servicelibs:reactive-grpc-common;version=1.0.1,\
-	io.grpc:grpc-api;version='1.31',\
-	io.grpc:grpc-protobuf;version='1.31',\
-	io.grpc:grpc-stub;version='1.31',\
-	io.grpc:grpc-context;version='1.31',\
-	io.reactivex.rxjava2:rxjava;version='2.2.19'
+    org.apache.tomcat:annotations-api,\
+    com.google.protobuf,\
+    com.google.guava:guava,\
+	com.salesforce.servicelibs:rxgrpc-stub,\
+	com.salesforce.servicelibs:reactive-grpc-common,\
+	io.grpc:grpc-api,\
+	io.grpc:grpc-protobuf,\
+	io.grpc:grpc-stub,\
+	io.grpc:grpc-context,\
+	io.reactivex.rxjava2:rxjava
+
+$if(javaLevel)$
+javac.source=$javaLevel$
+javac.target=$javaLevel$
+javac.compliance=$javaLevel$
+$endif$
 
 package-version = 1.0.0
 Bundle-Version: \${package-version}.\${tstamp}

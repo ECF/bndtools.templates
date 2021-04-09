@@ -3,10 +3,10 @@
 	osgi.core;version='7.0',\
 	osgi.cmpn;version='7.0',\
 	$api_package$;version=latest,\
-	io.reactivex.rxjava2.rxjava;version='2.2',\
+	io.reactivex.rxjava2.rxjava,\
 	io.grpc:grpc-stub,\
 	io.grpc:grpc-api,\
-	org.eclipse.ecf.provider.grpc;version='1.3',\
+	org.eclipse.ecf.provider.grpc,\
 	com.google.protobuf
 
 -testpath: \
@@ -15,11 +15,12 @@
 	\${mockito-deps}
 
 $if(javaLevel)$
-javac.source: $javaLevel$
-javac.target: $javaLevel$
+javac.source=$javaLevel$
+javac.target=$javaLevel$
+javac.compliance=$javaLevel$
 $endif$
 
-Require-Bundle: org.eclipse.ecf.provider.grpc;bundle-version="1.3",com.google.protobuf
+Require-Bundle: org.eclipse.ecf.provider.grpc,com.google.protobuf
 
 Bundle-Version: 1.0.0.\${tstamp}
 Export-Package: $projectName$
