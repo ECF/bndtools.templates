@@ -7,7 +7,8 @@
 	io.grpc:grpc-stub,\
 	io.grpc:grpc-api,\
 	org.eclipse.ecf.provider.grpc,\
-	com.google.protobuf
+	com.google.protobuf,\
+	org.reactivestreams.reactive-streams
 
 -testpath: \
 	\${junit},\
