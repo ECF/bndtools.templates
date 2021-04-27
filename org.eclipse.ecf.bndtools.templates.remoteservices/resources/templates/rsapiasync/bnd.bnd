@@ -1,9 +1,0 @@
--buildpath: osgi.annotation;version="7.0"
-
-Bundle-Version: 1.0.0.\${tstamp}
-
-$if(javaLevel)$
-javac.source=$javaLevel$
-javac.target=$javaLevel$
-javac.compliance=$javaLevel$
-$endif$

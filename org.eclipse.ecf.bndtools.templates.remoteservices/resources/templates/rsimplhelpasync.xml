@@ -1,9 +1,0 @@
-<form>
-<p>This template is used to create a Async Remote Service Implementation project.  </p>
-<p></p>
-<p>During project creation with this template, the api_package/plugin containing the ExampleAsyncRemoteService class declaration </p>
-<p>must be provided so that the compile-time references to ExampleAsyncRemoteService can be resolved.  The api_package/plugin name </p>
-<p>given should already exist in the workspace, and may be easily created by using the Async Remote Service API project template.  </p>
-<p>Once created, the new project will have a class implementing ExampleAsyncRemoteService with OSGi Remote Services </p>
-<p>service properties for exporting as a remote service.</p>
-</form>
