@@ -42,7 +42,7 @@ Provide-Capability: ${grpc-apigenerated-template},\
     ${grpc-apigenerated-impl-template},\
     ${grpc-apigenerated-consumer-template}
 
-package-version = 1.12.9
+package-version = 1.12.10
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
