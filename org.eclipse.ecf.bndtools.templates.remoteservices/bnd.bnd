@@ -51,7 +51,7 @@ Provide-Capability: ${grpc-apigenerated-template},\
     ${grpc-apigenerated-consumer-template},\
     ${launch-template-grpc-etcd}
 
-package-version = 1.12.15
+package-version = 1.12.16
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
