@@ -111,10 +111,17 @@ launch-template-generic:\
 
 launch-template-generic-etcd:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=Generic Distribution Provider with Etcd Discovery;\
+		name=Generic Distribution Provider with Etcd3 Discovery;\
 		category=${bndrun-category};\
 		dir=templates/launch/genericetcd;\
 	    help=templates/genericetcdbndrun.xml
+
+launch-template-grpc-etcd:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=gRPC Distribution Provider with Etcd3 Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/grpcetcd;\
+	    help=templates/grpcetcdbndrun.xml
 
 launch-template-rosgi:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
@@ -125,7 +132,7 @@ launch-template-rosgi:\
 
 launch-template-rosgi-etcd:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ROSGi Distribution Provider with Etcd Discovery;\
+		name=ROSGi Distribution Provider with Etcd3 Discovery;\
 		category=${bndrun-category};\
 		dir=templates/launch/rosgietcd;\
 	    help=templates/rosgietcdbndrun.xml
@@ -139,7 +146,7 @@ launch-template-xmlrpc:\
 
 launch-template-xmlrpc-etcd:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=XmlRpc Distribution Provider with Etcd Discovery;\
+		name=XmlRpc Distribution Provider with Etcd3 Discovery;\
 		category=${bndrun-category};\
 		dir=templates/launch/xmlrpcetcd;\
 	    help=templates/xmlrpcetcdbndrun.xml
@@ -258,7 +265,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${grpc-apigenerated-consumer-template},\
     ${python-hello-examples-template},\
     ${launch-template-generic},\
-    ${launch-template-generic-etcd},${launch-template-rosgi},\
+    ${launch-template-generic-etcd},${launch-template-grpc-etcd},${launch-template-rosgi},\
     ${launch-template-rosgi-etcd},${launch-template-xmlrpc},${launch-template-xmlrpc-etcd},\
     ${launch-template-pythonjavahello},${launch-template-pythonjavaprotobufhello},\
     ${launch-template-jaxrsjerseyserver},${launch-template-jaxrsjerseyclient},\
@@ -266,7 +273,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
     ${launch-template-hazelcast2}
 
-package-version = 1.12.13
+package-version = 1.12.15
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
