@@ -35,14 +35,23 @@ grpc-apigenerated-consumer-template:\
 		help=templates/grpcapigeneratedconsumer.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
 
+launch-template-grpc-etcd:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=gRPC Distribution Provider with Etcd3 Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/grpcetcd;\
+	    help=templates/grpcetcdbndrun.xml
+
+
 javac.source: 1.8
 javac.target: 1.8
 
 Provide-Capability: ${grpc-apigenerated-template},\
     ${grpc-apigenerated-impl-template},\
-    ${grpc-apigenerated-consumer-template}
+    ${grpc-apigenerated-consumer-template},\
+    ${launch-template-grpc-etcd}
 
-package-version = 1.12.10
+package-version = 1.12.15
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
