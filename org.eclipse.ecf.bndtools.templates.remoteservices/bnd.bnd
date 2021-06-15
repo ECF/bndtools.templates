@@ -71,15 +71,22 @@ launch-template-generic:\
 		dir=templates/launch/generic;\
 	    help=templates/genericbndrun.xml
 
+launch-template-generic-etcd:\
+	org.bndtools.template; org.bndtools.template=bndrun;\
+		name=Generic Distribution Provider with Etcd3 Discovery;\
+		category=${bndrun-category};\
+		dir=templates/launch/genericetcd;\
+	    help=templates/genericetcdbndrun.xml
+
 javac.source: 1.8
 javac.target: 1.8
 
 Provide-Capability: ${api-template},${api-async-template},\
     ${impl-template},${impl-async-template},\
     ${consumer-template},${consumer-async-template},\
-    ${launch-template-generic}
+    ${launch-template-generic},${launch-template-generic-etcd}
 
-package-version = 1.212.6
+package-version = 1.12.15
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
