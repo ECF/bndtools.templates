@@ -8,7 +8,7 @@
 	bnd.identity;id='org.eclipse.ecf.provider.grpc',\
 	bnd.identity;id='org.eclipse.ecf.provider.grpc.console',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.etcd3)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
@@ -32,3 +32,10 @@
 -runstartlevel: \
     order = leastdependencieslast, \
     begin = 1
+
+-runvm: -Decf.discovery.etcd3.usePlaintext=true\n\
+	-Decf.discovery.etcd3.hostname=localhost\n\
+	-Decf.discovery.etcd3.port=2379
+	
+-runblacklist: bnd.identity;id='osgi.cmpn'
+	
