@@ -10,13 +10,13 @@ src = src-gen, src
     org.apache.tomcat:annotations-api,\
     com.google.protobuf,\
     com.google.guava:guava,\
-	com.salesforce.servicelibs:rxgrpc-stub,\
-	com.salesforce.servicelibs:reactive-grpc-common,\
+	com.salesforce.servicelibs.rxgrpc-stub,\
+	com.salesforce.servicelibs.reactive-grpc-common,\
 	io.grpc:grpc-api,\
 	io.grpc:grpc-protobuf,\
 	io.grpc:grpc-stub,\
 	io.grpc:grpc-context,\
-	io.reactivex.rxjava2:rxjava
+	io.reactivex.rxjava2.rxjava
 
 $if(javaLevel)$
 javac.source=$javaLevel$
