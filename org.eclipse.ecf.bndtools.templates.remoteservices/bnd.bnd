@@ -9,7 +9,7 @@ rsimpl-icon: ${dataurl},${base64;icons/rsimpl.gif}
 api-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Remote Service API Project; \
+		name=Sync API Project; \
 		category=${project-category}; \
 		dir=templates/rsapi; \
 		icon="${rsapi-icon}"; \
@@ -18,7 +18,7 @@ api-template:\
 api-async-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Async Remote Service API Project; \
+		name=Async API Project; \
 		category=${project-category}; \
 		dir=templates/rsapiasync; \
 		icon="${rsapi-icon}"; \
@@ -27,7 +27,7 @@ api-async-template:\
 impl-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Remote Service Impl Project; \
+		name=Sync Impl Project; \
 		category=${project-category}; \
 		dir=templates/rsimpl; \
 		icon="${rsimpl-icon}"; \
@@ -37,7 +37,7 @@ impl-template:\
 impl-async-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Async Remote Service Impl Project; \
+		name=Async Impl Project; \
 		category=${project-category}; \
 		dir=templates/rsimplasync; \
 		icon="${rsimpl-icon}"; \
@@ -47,7 +47,7 @@ impl-async-template:\
 consumer-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Remote Service Consumer Project; \
+		name=Sync Consumer Project; \
 		category=${project-category}; \
 		dir=templates/rsconsumer; \
 		icon="${rsimpl-icon}"; \
@@ -57,7 +57,7 @@ consumer-template:\
 consumer-async-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Async Remote Service Consumer Project; \
+		name=Async Consumer Project; \
 		category=${project-category}; \
 		dir=templates/rsconsumerasync; \
 		icon="${rsimpl-icon}"; \
@@ -86,7 +86,7 @@ Provide-Capability: ${api-template},${api-async-template},\
     ${consumer-template},${consumer-async-template},\
     ${launch-template-generic},${launch-template-generic-etcd}
 
-package-version = 1.12.16
+package-version = 1.60.0
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
