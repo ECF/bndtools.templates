@@ -9,7 +9,7 @@ rsimpl-icon: ${dataurl},${base64;icons/rsimpl.gif}
 api-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Remote Service API Project; \
+		name=Sync API Project; \
 		category=${project-category}; \
 		dir=templates/rsapi; \
 		icon="${rsapi-icon}"; \
@@ -18,7 +18,7 @@ api-template:\
 jaxrsapi-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=JaxRS Remote Service Hello API Project; \
+		name=JaxRS API Project; \
 		category=${project-category}; \
 		dir=templates/jaxrsapi; \
 		icon="${rsapi-icon}"; \
@@ -27,7 +27,7 @@ jaxrsapi-template:\
 api-async-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Async Remote Service API Project; \
+		name=Async API Project; \
 		category=${project-category}; \
 		dir=templates/rsapiasync; \
 		icon="${rsapi-icon}"; \
@@ -36,7 +36,7 @@ api-async-template:\
 impl-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Remote Service Impl Project; \
+		name=Sync Impl Project; \
 		category=${project-category}; \
 		dir=templates/rsimpl; \
 		icon="${rsimpl-icon}"; \
@@ -46,7 +46,7 @@ impl-template:\
 jaxrsimpl-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=JaxRS Remote Service Hello Impl Project; \
+		name=JaxRS Impl Project; \
 		category=${project-category}; \
 		dir=templates/jaxrsimpl; \
 		icon="${rsimpl-icon}"; \
@@ -56,7 +56,7 @@ jaxrsimpl-template:\
 impl-async-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Async Remote Service Impl Project; \
+		name=Async Impl Project; \
 		category=${project-category}; \
 		dir=templates/rsimplasync; \
 		icon="${rsimpl-icon}"; \
@@ -66,7 +66,7 @@ impl-async-template:\
 consumer-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Remote Service Consumer Project; \
+		name=Sync Consumer Project; \
 		category=${project-category}; \
 		dir=templates/rsconsumer; \
 		icon="${rsimpl-icon}"; \
@@ -76,7 +76,7 @@ consumer-template:\
 jaxrsconsumer-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=JaxRS Remote Service Hello Consumer Project; \
+		name=JaxRS Consumer Project; \
 		category=${project-category}; \
 		dir=templates/jaxrsconsumer; \
 		icon="${rsimpl-icon}"; \
@@ -86,7 +86,7 @@ jaxrsconsumer-template:\
 consumer-async-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Async Remote Service Consumer Project; \
+		name=Async Consumer Project; \
 		category=${project-category}; \
 		dir=templates/rsconsumerasync; \
 		icon="${rsimpl-icon}"; \
@@ -96,7 +96,7 @@ consumer-async-template:\
 python-hello-examples-template:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=Python.Java Hello Remote Service Examples; \
+		name=Python.Java Example Project; \
 		category=${project-category}; \
 		dir=templates/hellopythonexamples; \
 		icon="${rsimpl-icon}"; \
@@ -225,35 +225,6 @@ launch-template-hazelcast2:\
 		dir=templates/launch/hazelcasthazelcast;\
 	    help=templates/hazelcast2bndrun.xml
 
-grpc-apigenerated-template:\
- 	org.bndtools.template;\
-		org.bndtools.template=project; \
-		name=gRPC Protoc-Generated HealthCheck ReactiveX 2 API Project; \
-		category=${project-category}; \
-		dir=templates/grpcapigenerated; \
-		icon="${rsimpl-icon}"; \
-		help=templates/grpcapigenerated.xml
-
-grpc-apigenerated-impl-template:\
- 	org.bndtools.template;\
-		org.bndtools.template=project; \
-		name=gRPC Protoc-Generated HealthCheck ReactiveX 2 Impl Project; \
-		category=${project-category}; \
-		dir=templates/grpcapigeneratedimpl; \
-		icon="${rsimpl-icon}"; \
-		help=templates/grpcapigeneratedimpl.xml; \
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
-
-grpc-apigenerated-consumer-template:\
- 	org.bndtools.template;\
-		org.bndtools.template=project; \
-		name=gRPC Protoc-Generated HealthCheck ReactiveX 2 Consumer Project; \
-		category=${project-category}; \
-		dir=templates/grpcapigeneratedconsumer; \
-		icon="${rsimpl-icon}"; \
-		help=templates/grpcapigeneratedconsumer.xml; \
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
-
 grpc-apigenerated-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
@@ -289,9 +260,6 @@ javac.target: 1.8
 Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${jaxrsimpl-template},${consumer-template},${jaxrsconsumer-template},\
     ${api-async-template},${impl-async-template},${consumer-async-template},\
-    ${grpc-apigenerated-template},\
-    ${grpc-apigenerated-impl-template},\
-    ${grpc-apigenerated-consumer-template},\
     ${grpc-apigenerated-template-rx3},\
     ${grpc-apigenerated-impl-template-rx3},\
     ${grpc-apigenerated-consumer-template-rx3},\
@@ -305,7 +273,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
     ${launch-template-hazelcast2}
 
-package-version = 1.13.4
+package-version = 2.0.0
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 

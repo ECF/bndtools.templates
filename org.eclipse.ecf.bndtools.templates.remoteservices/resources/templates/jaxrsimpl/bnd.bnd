@@ -15,5 +15,5 @@ javac.source: $javaLevel$
 javac.target: $javaLevel$
 $endif$
 
-Bundle-Version: 1.3.0.\${tstamp}
+Bundle-Version: 1.0.0.\${tstamp}
 Export-Package: $projectName$
