@@ -86,7 +86,7 @@ Provide-Capability: ${api-template},${api-async-template},\
     ${consumer-template},${consumer-async-template},\
     ${launch-template-generic},${launch-template-generic-etcd}
 
-package-version = 1.60.0
+package-version = 1.60.1
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
