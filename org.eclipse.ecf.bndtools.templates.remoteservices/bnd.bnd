@@ -79,7 +79,7 @@ Provide-Capability: ${grpc-apigenerated-template-rx3},\
     ${grpc-apigenerated-consumer-template-rx3},\
     ${launch-template-grpc-etcd}
 
-package-version = 1.50.0
+package-version = 1.50.1
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
