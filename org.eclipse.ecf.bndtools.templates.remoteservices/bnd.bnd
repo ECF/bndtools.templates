@@ -273,7 +273,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
     ${launch-template-hazelcast2}
 
-package-version = 2.0.0
+package-version = 2.0.1
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
