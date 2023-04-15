@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package $basePackageName$;
+
+option java_multiple_files = true;
+option java_outer_classname = "$serviceName$Proto";
+option java_package = "$basePackageName$";
+
+message $serviceName$Request {
+  string requestMessage = 1;
+}
+
+message $serviceName$Response {
+  string responseMessage = 1;
+}
+
+service $serviceName$ {
+  // Unary method
+  rpc myUnaryCall($serviceName$Request) returns ($serviceName$Response);
+  // Server streaming method
+  rpc myServerStream($serviceName$Request) returns (stream $serviceName$Response);
+  // Client streaming method
+  rpc myClientStream(stream $serviceName$Request) returns ($serviceName$Response);
+  // bidi streaming method
+  rpc myBidiStream(stream $serviceName$Request) returns (stream $serviceName$Response);
+}

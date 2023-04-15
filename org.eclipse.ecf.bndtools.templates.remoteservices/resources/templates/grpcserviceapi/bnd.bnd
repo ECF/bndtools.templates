@@ -1,0 +1,30 @@
+src = src-gen, src
+
+# use GrpcGenerator to generate code to src-gen using protofiles dir and protofiles/health.proto file
+-generate \
+    protofiles; \
+        output = src-gen; \
+        generate = "org.eclipse.ecf.bndtools.grpc.GrpcGenerator rxjava3 -I=protofiles --java_out=src-gen $serviceName$.proto 2>protoc.errors"
+           
+-buildpath: \
+    org.apache.tomcat:annotations-api,\
+    com.google.protobuf,\
+    com.google.guava:guava,\
+	com.salesforce.servicelibs.rx3grpc-stub,\
+	com.salesforce.servicelibs.reactive-grpc-common,\
+	io.grpc:grpc-api,\
+	io.grpc:grpc-protobuf,\
+	io.grpc:grpc-stub,\
+	io.grpc:grpc-context,\
+	io.reactivex.rxjava3.rxjava
+
+$if(javaLevel)$
+javac.source=$javaLevel$
+javac.target=$javaLevel$
+javac.compliance=$javaLevel$
+$endif$
+
+package-version = 1.0.0
+Bundle-Version: \${package-version}.\${tstamp}
+
+Export-Package: $basePackageName$;version="\${package-version}"

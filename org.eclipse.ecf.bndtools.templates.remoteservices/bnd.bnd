@@ -1,4 +1,5 @@
 project-category: bbb/Remote Service Project Templates
+service-category: bbb/Remote Service Templates
 bndrun-category: bbb/Remote Service Bndrun Templates
 bndrun-examples-category: bbb/Remote Service Example Templates
 
@@ -228,11 +229,38 @@ launch-template-hazelcast2:\
 grpc-apigenerated-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=gRPC Protoc-Generated HealthCheck ReactiveX 3 API Project; \
+		name=gRPC Remote Service API; \
 		category=${project-category}; \
 		dir=templates/grpcapigeneratedrx3; \
 		icon="${rsimpl-icon}"; \
 		help=templates/grpcapigeneratedrx3.xml
+
+grpc-service-template-rx3:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-api; \
+		name=grpc; \
+		category=${service-category}; \
+		dir=templates/grpcserviceapi; \
+		icon="${rsimpl-icon}"; \
+		help=templates/grpserviceapi.xml
+
+grpc-service-impl-template-rx3:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-impl; \
+		name=grpc; \
+		category=${service-category}; \
+		dir=templates/grpcserviceimpl; \
+		icon="${rsimpl-icon}"; \
+		help=templates/grpserviceapi.xml
+
+grpc-service-consumer-template-rx3:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-consumer; \
+		name=grpc; \
+		category=${service-category}; \
+		dir=templates/grpcserviceconsumer; \
+		icon="${rsimpl-icon}"; \
+		help=templates/grpserviceapi.xml
 
 grpc-apigenerated-impl-template-rx3:\
  	org.bndtools.template;\
@@ -271,9 +299,10 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jaxrsjerseyserver},${launch-template-jaxrsjerseyclient},\
     ${launch-template-jaxrscxfserver},${launch-template-jaxrscxfclient},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
-    ${launch-template-hazelcast2}
+    ${launch-template-hazelcast2},${grpc-service-template-rx3},${grpc-service-impl-template-rx3},\
+    ${grpc-service-consumer-template-rx3}
 
-package-version = 2.0.1
+package-version = 2.1.1
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
