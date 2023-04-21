@@ -229,7 +229,7 @@ launch-template-hazelcast2:\
 grpc-apigenerated-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=gRPC Remote Service API; \
+		name=gRPC Remote Service API Project; \
 		category=${project-category}; \
 		dir=templates/grpcapigeneratedrx3; \
 		icon="${rsimpl-icon}"; \
@@ -265,7 +265,7 @@ grpc-service-consumer-template-rx3:\
 grpc-apigenerated-impl-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=gRPC Protoc-Generated HealthCheck ReactiveX 3 Impl Project; \
+		name=gRPC Remote Service Impl Project; \
 		category=${project-category}; \
 		dir=templates/grpcapigeneratedimplrx3; \
 		icon="${rsimpl-icon}"; \
@@ -275,7 +275,7 @@ grpc-apigenerated-impl-template-rx3:\
 grpc-apigenerated-consumer-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=gRPC Protoc-Generated HealthCheck ReactiveX 3 Consumer Project; \
+		name=gRPC Remote Service Consumer Project; \
 		category=${project-category}; \
 		dir=templates/grpcapigeneratedconsumerrx3; \
 		icon="${rsimpl-icon}"; \
@@ -302,7 +302,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-hazelcast2},${grpc-service-template-rx3},${grpc-service-impl-template-rx3},\
     ${grpc-service-consumer-template-rx3}
 
-package-version = 2.1.1
+package-version = 2.1.5
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 

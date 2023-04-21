@@ -8,23 +8,16 @@ src = src-gen, src
            
 -buildpath: \
     org.apache.tomcat:annotations-api,\
-    com.google.protobuf,\
+    wrapped.com.google.protobuf.protobuf-java,\
     com.google.guava:guava,\
 	com.salesforce.servicelibs.rx3grpc-stub,\
 	com.salesforce.servicelibs.reactive-grpc-common,\
-	io.grpc:grpc-api,\
-	io.grpc:grpc-protobuf,\
-	io.grpc:grpc-stub,\
-	io.grpc:grpc-context,\
+	wrapped.io.grpc.grpc-api,\
+	wrapped.io.grpc.grpc-protobuf,\
+	wrapped.io.grpc.grpc-stub,\
+	wrapped.io.grpc.grpc-context,\
 	io.reactivex.rxjava3.rxjava
 
-$if(javaLevel)$
-javac.source=$javaLevel$
-javac.target=$javaLevel$
-javac.compliance=$javaLevel$
-$endif$
-
 package-version = 1.0.0
-Bundle-Version: \${package-version}.\${tstamp}
 
 Export-Package: $basePackageName$;version="\${package-version}"

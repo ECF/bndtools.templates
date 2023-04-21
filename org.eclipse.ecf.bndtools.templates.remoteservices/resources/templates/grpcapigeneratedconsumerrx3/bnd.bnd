@@ -3,22 +3,12 @@
 	osgi.core;version='7.0',\
 	osgi.cmpn;version='7.0',\
 	$api_package$;version=latest,\
-	io.reactivex.rxjava3.rxjava;version='2.2',\
-	org.eclipse.ecf.provider.grpc;version='1.5',\
-	com.google.protobuf,\
-	org.reactivestreams.reactive-streams
+	io.reactivex.rxjava3.rxjava,\
+	org.eclipse.ecf.provider.grpc,\
+	wrapped.com.google.protobuf.protobuf-java,\
+	reactive-streams
 
 -testpath: \
 	\${junit},\
 	\${mockito},\
 	\${mockito-deps}
-
-$if(javaLevel)$
-javac.source: $javaLevel$
-javac.target: $javaLevel$
-$endif$
-
-Require-Bundle: org.eclipse.ecf.provider.grpc;bundle-version="1.3",com.google.protobuf
-
-Bundle-Version: 1.0.0.\${tstamp}
-Export-Package: $projectName$

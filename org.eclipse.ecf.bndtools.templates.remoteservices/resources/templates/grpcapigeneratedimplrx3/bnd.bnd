@@ -4,24 +4,13 @@
 	osgi.cmpn;version='7.0',\
 	$api_package$;version=latest,\
 	io.reactivex.rxjava3.rxjava,\
-	io.grpc:grpc-stub,\
-	io.grpc:grpc-api,\
+	wrapped.io.grpc.grpc-stub,\
+	wrapped.io.grpc.grpc-api,\
 	org.eclipse.ecf.provider.grpc,\
-	com.google.protobuf,\
-	org.reactivestreams.reactive-streams
+	wrapped.com.google.protobuf.protobuf-java,\
+	reactive-streams
 
 -testpath: \
 	\${junit},\
 	\${mockito},\
 	\${mockito-deps}
-
-$if(javaLevel)$
-javac.source=$javaLevel$
-javac.target=$javaLevel$
-javac.compliance=$javaLevel$
-$endif$
-
-Require-Bundle: org.eclipse.ecf.provider.grpc,com.google.protobuf
-
-Bundle-Version: 1.0.0.\${tstamp}
-Export-Package: $projectName$
