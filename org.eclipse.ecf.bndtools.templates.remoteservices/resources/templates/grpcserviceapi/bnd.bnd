@@ -16,7 +16,7 @@ src = src-gen, src
 	wrapped.io.grpc.grpc-protobuf,\
 	wrapped.io.grpc.grpc-stub,\
 	wrapped.io.grpc.grpc-context,\
-	wrapped.io.reactivex.rxjava3.rxjava
+	io.reactivex.rxjava3.rxjava
 
 package-version = 1.0.0
 Export-Package: $basePackageName$;version="\${package-version}"

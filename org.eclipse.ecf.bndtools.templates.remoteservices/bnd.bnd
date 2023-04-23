@@ -302,7 +302,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-hazelcast2},${grpc-service-template-rx3},${grpc-service-impl-template-rx3},\
     ${grpc-service-consumer-template-rx3}
 
-package-version = 2.1.5
+package-version = 2.1.6
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
