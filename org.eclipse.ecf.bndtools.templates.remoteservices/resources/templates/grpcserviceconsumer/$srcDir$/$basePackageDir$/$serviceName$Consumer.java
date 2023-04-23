@@ -13,7 +13,7 @@ import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Single;
 
 @Component(immediate = true)
-public class $serviceName$ServiceConsumer {
+public class $serviceName$Consumer {
 
 	@Reference(policy = ReferencePolicy.DYNAMIC)
 	private volatile $serviceName$Service service;
