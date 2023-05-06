@@ -240,27 +240,84 @@ grpc-service-template-rx3:\
 		org.bndtools.template=service-api; \
 		name=grpc; \
 		category=${service-category}; \
-		dir=templates/grpcserviceapi; \
-		icon="${rsimpl-icon}"; \
-		help=templates/grpserviceapi.xml
+		dir=templates/grpcserviceapi
 
 grpc-service-impl-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=service-impl; \
 		name=grpc; \
 		category=${service-category}; \
-		dir=templates/grpcserviceimpl; \
-		icon="${rsimpl-icon}"; \
-		help=templates/grpserviceapi.xml
+		dir=templates/grpcserviceimpl
 
 grpc-service-consumer-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=service-consumer; \
 		name=grpc; \
 		category=${service-category}; \
-		dir=templates/grpcserviceconsumer; \
-		icon="${rsimpl-icon}"; \
-		help=templates/grpserviceapi.xml
+		dir=templates/grpcserviceconsumer
+	
+rs-service-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-api; \
+		name=rs; \
+		category=${service-category}; \
+		dir=templates/rsserviceapi
+
+rs-service-impl-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-impl; \
+		name=rs; \
+		category=${service-category}; \
+		dir=templates/rsserviceimpl
+
+rs-service-consumer-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-consumer; \
+		name=rs; \
+		category=${service-category}; \
+		dir=templates/rsserviceconsumer
+	
+rsasync-service-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-api; \
+		name=rsasync; \
+		category=${service-category}; \
+		dir=templates/rsasyncserviceapi
+
+rsasync-service-impl-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-impl; \
+		name=rsasync; \
+		category=${service-category}; \
+		dir=templates/rsasyncserviceimpl
+
+rsasync-service-consumer-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-consumer; \
+		name=rsasync; \
+		category=${service-category}; \
+		dir=templates/rsasyncserviceconsumer
+
+jaxrs-service-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-api; \
+		name=jaxrs; \
+		category=${service-category}; \
+		dir=templates/jaxrsserviceapi
+
+jaxrs-service-impl-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-impl; \
+		name=jaxrs; \
+		category=${service-category}; \
+		dir=templates/jaxrsserviceimpl
+
+jaxrs-service-consumer-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-consumer; \
+		name=jaxrs; \
+		category=${service-category}; \
+		dir=templates/jaxrsserviceconsumer
 
 grpc-apigenerated-impl-template-rx3:\
  	org.bndtools.template;\
@@ -300,9 +357,12 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${launch-template-jaxrscxfserver},${launch-template-jaxrscxfclient},\
     ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
     ${launch-template-hazelcast2},${grpc-service-template-rx3},${grpc-service-impl-template-rx3},\
-    ${grpc-service-consumer-template-rx3}
+    ${grpc-service-consumer-template-rx3},${rsasync-service-template},${rsasync-service-impl-template},\
+    ${rsasync-service-consumer-template},${jaxrs-service-template},${jaxrs-service-impl-template},\
+    ${jaxrs-service-consumer-template},${rs-service-template},${rs-service-impl-template},\
+    ${rs-service-consumer-template}
 
-package-version = 2.1.7
+package-version = 2.2.0
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 

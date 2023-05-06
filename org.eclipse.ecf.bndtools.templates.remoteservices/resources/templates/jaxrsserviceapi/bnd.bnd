@@ -1,0 +1,5 @@
+Export-Package: $basePackageName$
+-buildpath: \
+	jakarta.ws.rs-api,\
+	osgi.annotation,\
+	org.osgi.annotation.bundle

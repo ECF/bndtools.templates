@@ -1,0 +1,38 @@
+-runfw: org.apache.felix.framework;version='[7.0.0,7.0.0]'
+-runee: JavaSE-$javaLevel$
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.scr)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.etcd3)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.remoteservice)',\
+	osgi.identity;filter:='(osgi.identity=$projectName$)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
+	bnd.identity;id='org.osgi.util.function',\
+	bnd.identity;id='org.osgi.util.promise',\
+	bnd.identity;id='org.apache.felix.gogo.runtime',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='org.apache.felix.gogo.command',\
+	bnd.identity;id='io.netty.buffer',\
+	bnd.identity;id='io.netty.codec',\
+	bnd.identity;id='io.netty.codec-http',\
+	bnd.identity;id='io.netty.codec-http2',\
+	bnd.identity;id='io.netty.codec-socks',\
+	bnd.identity;id='io.netty.common',\
+	bnd.identity;id='io.netty.handler',\
+	bnd.identity;id='io.netty.handler-proxy',\
+	bnd.identity;id='io.netty.resolver',\
+	bnd.identity;id='io.netty.transport',\
+	bnd.identity;version='1.4.0.202104121538';id='org.eclipse.ecf.provider.grpc'
+
+-runvm: -Decf.discovery.etcd3.usePlaintext=true\n\
+	-Decf.discovery.etcd3.hostname=localhost\n\
+	-Decf.discovery.etcd3.port=2379
+
+-runblacklist: bnd.identity;id='osgi.cmpn'

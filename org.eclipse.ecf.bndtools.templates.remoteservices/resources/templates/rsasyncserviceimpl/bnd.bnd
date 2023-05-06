@@ -1,0 +1,6 @@
+-buildpath: \
+	osgi.annotation;version='7.0',\
+	$api_package$;version=latest,\
+	org.osgi.service.component.annotations,\
+	org.osgi.service.component
+

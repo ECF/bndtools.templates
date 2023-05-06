@@ -1,8 +1,2 @@
-$if(javaLevel)$
-javac.source: $javaLevel$
-javac.target: $javaLevel$
-$endif$
-
-Bundle-Version: 1.0.0.\${tstamp}
 Export-Package: $basePackageName$
 -buildpath: jakarta.ws.rs-api

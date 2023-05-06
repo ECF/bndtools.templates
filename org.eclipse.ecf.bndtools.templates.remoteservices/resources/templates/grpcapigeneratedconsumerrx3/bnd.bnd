@@ -1,12 +1,12 @@
 -buildpath: \
-	osgi.annotation;version='7.0',\
-	osgi.core;version='7.0',\
-	osgi.cmpn;version='7.0',\
+	osgi.annotation,\
+	osgi.core,\
 	$api_package$;version=latest,\
 	io.reactivex.rxjava3.rxjava,\
 	org.eclipse.ecf.provider.grpc,\
 	wrapped.com.google.protobuf.protobuf-java,\
-	reactive-streams
+	reactive-streams,\
+	org.osgi.service.component.annotations
 
 -testpath: \
 	\${junit},\

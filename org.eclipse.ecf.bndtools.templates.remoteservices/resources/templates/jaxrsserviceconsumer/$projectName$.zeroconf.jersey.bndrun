@@ -1,0 +1,21 @@
+-runrequires: \
+    bnd.identity;id='org.apache.felix.gogo.runtime',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='org.apache.felix.gogo.command',\
+    bnd.identity;id='org.apache.felix.eventadmin',\
+    osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.provider.jmdns)',\
+    bnd.identity;id='org.eclipse.ecf.provider.jersey.client',\
+    bnd.identity;id='org.eclipse.ecf.osgi.services.distribution',\
+	bnd.identity;id='org.eclipse.ecf.osgi.services.remoteserviceadmin.console',\
+    osgi.identity;filter:='(osgi.identity=$projectName$)'
+
+-runproperties: osgi.console=,\
+				osgi.console.enable.builtin=false
+    
+-runfw: org.eclipse.osgi;version=3.13
+
+-resolve: manual
+	
+-runee: JavaSE-$javaLevel$
+
+-runblacklist: bnd.identity;id='org.apache.aries.javax.jax.rs-api'
