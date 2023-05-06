@@ -362,7 +362,7 @@ Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${jaxrs-service-consumer-template},${rs-service-template},${rs-service-impl-template},\
     ${rs-service-consumer-template}
 
-package-version = 2.2.0
+package-version = 2.2.1
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 

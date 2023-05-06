@@ -33,7 +33,7 @@ import $api_package$.$serviceName$Service;
 		"osgi.basic", "osgi.async" })
 public class $serviceName$Impl implements $serviceName$Service {
 
-	public CompletableFuture<String> hello(String from) {
+	public CompletableFuture<String> callasync(String from) {
 		return CompletableFuture.completedFuture("Hello to " + from);
 	}
 
