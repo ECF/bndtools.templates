@@ -8,7 +8,8 @@ import $api_package$.HelloWorldService;
 @Component(immediate = true)
 public class HelloWorldServiceConsumer {
 
-	@Reference
+	// target = (service.imported=*) guarantees that it's a remote service that gets injected
+	@Reference(target = "(service.imported=*)")
 	HelloWorldService service;
 
 	@Activate

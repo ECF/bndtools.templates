@@ -8,7 +8,8 @@ import $api_package$.$serviceName$Service;
 @Component(immediate = true)
 public class $serviceName$Consumer {
 
-	@Reference
+	// target = (service.imported=*) guarantees that it's a remote service that gets injected
+	@Reference(target = "(service.imported=*)")
 	$serviceName$Service service;
 
 	@Activate
