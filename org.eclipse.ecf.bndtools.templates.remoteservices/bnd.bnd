@@ -94,15 +94,6 @@ consumer-async-template:\
 		help=templates/rsconsumerhelpasync.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.consumer.xml
 
-python-hello-examples-template:\
- 	org.bndtools.template;\
-		org.bndtools.template=project; \
-		name=Python.Java Example Project; \
-		category=${project-category}; \
-		dir=templates/hellopythonexamples; \
-		icon="${rsimpl-icon}"; \
-		help=templates/hellopythonexamples.xml
-
 launch-template-generic:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
 		name=Generic Distribution Provider with Zeroconf Discovery;\
@@ -138,34 +129,6 @@ launch-template-rosgi-etcd:\
 		dir=templates/launch/rosgietcd;\
 	    help=templates/rosgietcdbndrun.xml
 		
-launch-template-xmlrpc:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=XmlRpc Distribution Provider with Zeroconf Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/xmlrpc;\
-	    help=templates/xmlrpcbndrun.xml
-
-launch-template-xmlrpc-etcd:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=XmlRpc Distribution Provider with Etcd3 Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/xmlrpcetcd;\
-	    help=templates/xmlrpcetcdbndrun.xml
-
-launch-template-pythonjavahello:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=Python.Java Hello Example;\
-		category=${bndrun-examples-category};\
-		dir=templates/launch/pythonjavahello;\
-		help=templates/pythonjavahello.xml
-
-launch-template-pythonjavaprotobufhello:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=Python.Java Protobuf Hello Example;\
-		category=${bndrun-examples-category};\
-		dir=templates/launch/pythonjavaprotobufhello;\
-		help=templates/pythonjavaprotobufhello.xml
-
 launch-template-jaxrsjerseyserver:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
 		name=JaxRS Jersey Server Distribution Provider with Zeroconf Discovery;\
@@ -211,13 +174,6 @@ launch-template-hazelcast:\
 		category=${bndrun-category};\
 		dir=templates/launch/hazelcast;\
 	    help=templates/hazelcastbndrun.xml
-
-launch-template-mqtt:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=MQTT Distribution Provider with Zeroconf Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/mqtt;\
-	    help=templates/mqttbndrun.xml
 
 launch-template-hazelcast2:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
@@ -339,30 +295,25 @@ grpc-apigenerated-consumer-template-rx3:\
 		help=templates/grpcapigeneratedconsumerrx3.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
 
-javac.source: 1.8
-javac.target: 1.8
-
 Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
     ${jaxrsimpl-template},${consumer-template},${jaxrsconsumer-template},\
     ${api-async-template},${impl-async-template},${consumer-async-template},\
     ${grpc-apigenerated-template-rx3},\
     ${grpc-apigenerated-impl-template-rx3},\
     ${grpc-apigenerated-consumer-template-rx3},\
-    ${python-hello-examples-template},\
     ${launch-template-generic},\
     ${launch-template-generic-etcd},${launch-template-grpc-etcd},${launch-template-rosgi},\
-    ${launch-template-rosgi-etcd},${launch-template-xmlrpc},${launch-template-xmlrpc-etcd},\
-    ${launch-template-pythonjavahello},${launch-template-pythonjavaprotobufhello},\
+    ${launch-template-rosgi-etcd},\
     ${launch-template-jaxrsjerseyserver},${launch-template-jaxrsjerseyclient},\
     ${launch-template-jaxrscxfserver},${launch-template-jaxrscxfclient},\
-    ${launch-template-activemq},${launch-template-hazelcast},${launch-template-mqtt},\
+    ${launch-template-activemq},${launch-template-hazelcast},\
     ${launch-template-hazelcast2},${grpc-service-template-rx3},${grpc-service-impl-template-rx3},\
     ${grpc-service-consumer-template-rx3},${rsasync-service-template},${rsasync-service-impl-template},\
     ${rsasync-service-consumer-template},${jaxrs-service-template},${jaxrs-service-impl-template},\
     ${jaxrs-service-consumer-template},${rs-service-template},${rs-service-impl-template},\
     ${rs-service-consumer-template}
 
-package-version = 2.2.4
+package-version = 2.3.3
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 

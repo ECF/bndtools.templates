@@ -1,10 +1,7 @@
-src = src-gen, src
-
-# use GrpcGenerator to generate code to src-gen using protofiles dir and protofiles/health.proto file
 -generate \
-    protofiles; \
-        output = src-gen; \
-        generate = "org.eclipse.ecf.bndtools.grpc.GrpcGenerator rxjava3 -I=protofiles --java_out=src-gen health.proto 2>protoc.errors"
+	protofiles; \
+		output=src/main/java; \
+		generate='org.eclipse.ecf.bndtools.grpc.GrpcGenerator rxjava3 -I=protofiles --java_out=src/main/java health.proto 2>protoc.errors'
            
 -buildpath: \
     org.apache.tomcat:annotations-api,\

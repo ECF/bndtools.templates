@@ -12,10 +12,4 @@
 -runproperties: osgi.console=,\
 				osgi.console.enable.builtin=false
     
--runfw: org.eclipse.osgi;version=3.13
-
--resolve: manual
-	
--runee: JavaSE-$javaLevel$
-
 -runblacklist: bnd.identity;id='org.apache.aries.javax.jax.rs-api'

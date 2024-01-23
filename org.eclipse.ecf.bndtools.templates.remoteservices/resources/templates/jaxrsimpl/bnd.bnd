@@ -5,7 +5,3 @@
 	org.osgi.service.component.annotations,\
 	jakarta.ws.rs-api
 
--testpath: \
-	\${junit},\
-	\${mockito},\
-	\${mockito-deps}

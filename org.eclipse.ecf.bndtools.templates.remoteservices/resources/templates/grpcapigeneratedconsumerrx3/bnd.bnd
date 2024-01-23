@@ -8,7 +8,3 @@
 	reactive-streams,\
 	org.osgi.service.component.annotations
 
--testpath: \
-	\${junit},\
-	\${mockito},\
-	\${mockito-deps}

@@ -7,7 +7,7 @@ Note that these system properties are set in the <projectName>.etcd3.grpc.bndrun
 	-Decf.discovery.etcd3.hostname=localhost\n\
 	-Decf.discovery.etcd3.port=2379
 
-These properties set the target etcd3 server hostname to 'localhost', port to 2379 (etcd default), and uses 'plaintext' rather than
-encrypted communication for testing.  These can/should be changed as appropriate to the network environment for the
-etcd server being used.
+These properties set the target etcd3 server hostname to 'localhost', port to 2379 (etcd default), and uses 
+'plaintext' rather than encrypted communication for testing.  These can/should be changed as appropriate 
+to the deployed network environment for the etcd server actually being used.
 
