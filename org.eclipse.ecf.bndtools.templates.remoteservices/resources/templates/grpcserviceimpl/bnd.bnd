@@ -1,6 +1,6 @@
 -buildpath: \
 	org.osgi.service.component.annotations,\
-	org.healthcheck;version=latest,\
+	$api_package$;version=latest,\
 	io.reactivex.rxjava3.rxjava,\
 	wrapped.io.grpc.grpc-stub,\
 	wrapped.io.grpc.grpc-api,\
