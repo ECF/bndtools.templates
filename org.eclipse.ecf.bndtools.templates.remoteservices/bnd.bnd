@@ -185,7 +185,7 @@ launch-template-hazelcast2:\
 grpc-apigenerated-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=gRPC Remote Service API Project; \
+		name=gRPC HeathCheck Example API Project; \
 		category=${project-category}; \
 		dir=templates/grpcapigeneratedrx3; \
 		icon="${rsimpl-icon}"; \
@@ -278,7 +278,7 @@ jaxrs-service-consumer-template:\
 grpc-apigenerated-impl-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=gRPC Remote Service Impl Project; \
+		name=gRPC HeathCheck Example Impl Project; \
 		category=${project-category}; \
 		dir=templates/grpcapigeneratedimplrx3; \
 		icon="${rsimpl-icon}"; \
@@ -288,32 +288,29 @@ grpc-apigenerated-impl-template-rx3:\
 grpc-apigenerated-consumer-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=gRPC Remote Service Consumer Project; \
+		name=gRPC HealthCheck Example Consumer Project; \
 		category=${project-category}; \
 		dir=templates/grpcapigeneratedconsumerrx3; \
 		icon="${rsimpl-icon}"; \
 		help=templates/grpcapigeneratedconsumerrx3.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
 
-Provide-Capability: ${api-template},${jaxrsapi-template},${impl-template},\
-    ${jaxrsimpl-template},${consumer-template},${jaxrsconsumer-template},\
-    ${api-async-template},${impl-async-template},${consumer-async-template},\
+Provide-Capability: ${api-template},${impl-template},\
+    ${consumer-template},${api-async-template},\
+    ${impl-async-template},${consumer-async-template},\
     ${grpc-apigenerated-template-rx3},\
     ${grpc-apigenerated-impl-template-rx3},\
     ${grpc-apigenerated-consumer-template-rx3},\
     ${launch-template-generic},\
     ${launch-template-generic-etcd},${launch-template-grpc-etcd},${launch-template-rosgi},\
     ${launch-template-rosgi-etcd},\
-    ${launch-template-jaxrsjerseyserver},${launch-template-jaxrsjerseyclient},\
-    ${launch-template-jaxrscxfserver},${launch-template-jaxrscxfclient},\
-    ${launch-template-activemq},${launch-template-hazelcast},\
-    ${launch-template-hazelcast2},${grpc-service-template-rx3},${grpc-service-impl-template-rx3},\
+    ${grpc-service-template-rx3},${grpc-service-impl-template-rx3},\
     ${grpc-service-consumer-template-rx3},${rsasync-service-template},${rsasync-service-impl-template},\
-    ${rsasync-service-consumer-template},${jaxrs-service-template},${jaxrs-service-impl-template},\
-    ${jaxrs-service-consumer-template},${rs-service-template},${rs-service-impl-template},\
+    ${rsasync-service-consumer-template},\
+    ${rs-service-template},${rs-service-impl-template},\
     ${rs-service-consumer-template}
 
-package-version = 2.3.3
+package-version = 2.4.1
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
