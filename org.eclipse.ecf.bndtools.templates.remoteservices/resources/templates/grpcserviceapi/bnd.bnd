@@ -1,7 +1,7 @@
 -generate \
 	protofiles; \
 		output=src/main/java; \
-		generate='org.eclipse.ecf.bndtools.grpc.GrpcGenerator rxjava3 -I=protofiles --java_out=src/main/java health.proto 2>protoc.errors'
+		generate='org.eclipse.ecf.bndtools.grpc.GrpcGenerator rxjava3 -I=protofiles --java_out=src/main/java $serviceName$.proto 2>protoc.errors'
            
 -buildpath: \
     org.apache.tomcat:annotations-api,\

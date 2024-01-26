@@ -1,10 +1,7 @@
 -buildpath: \
-	osgi.annotation,\
-	osgi.core,\
-	$api_package$;version=latest,\
+	org.osgi.service.component.annotations,\
+	org.healthcheck;version=latest,\
 	io.reactivex.rxjava3.rxjava,\
 	org.eclipse.ecf.provider.grpc,\
 	wrapped.com.google.protobuf.protobuf-java,\
-	reactive-streams,\
-	org.osgi.service.component.annotations
-
+	reactive-streams
