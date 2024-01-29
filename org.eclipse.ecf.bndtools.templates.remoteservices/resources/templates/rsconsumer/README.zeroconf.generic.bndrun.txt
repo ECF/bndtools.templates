@@ -1,12 +1,7 @@
-Discovery Note:  The zeroconf discovery uses LAN-based multicast.  If multicast is disabled 
-on the LAN, then discovery will not happen.
+README for zeroconf discovery and generic distribution Bnd Run File
 
-Distribution Note:   To successfully run the <projectname>.zeroconf.generic.bndrun and export the
-ExampleAsyncRemoteService service, the @ExportedService annotation must be modified (in the 
-ExampleAsyncRemoteServiceImpl source code) so that the service_exported_configs is set to 
-ecf.generic.server.  For example:
+Requirements:  Zeroconf discovery uses LAN-based multicast.  If multicast 
+is disabled on the LAN where this bndrun is being used, then discovery 
+will not happen.
 
-@ExportedService(service_exported_interfaces = ExampleRemoteService.class, service_exported_configs = "ecf.generic.server")
-public class ExampleAsyncRemoteServiceImpl implements ExampleAsyncRemoteService {
-...
-
+See README.txt for the steps for starting zeroconf Bnd Run File config.

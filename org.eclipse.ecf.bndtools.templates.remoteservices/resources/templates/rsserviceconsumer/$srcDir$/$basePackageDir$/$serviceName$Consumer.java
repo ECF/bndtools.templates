@@ -17,7 +17,7 @@ public class $serviceName$Consumer {
 	void bindService($serviceName$Service svc) {
 		this.service = svc;
 		System.out.println(
-				"Async remote service consumer activated.  Console command 'callasync <name>' may now be used");
+				"Sync remote service consumer activated.  Console command 'callsync <name>' may now be used");
 	}
 
 	void unbindService($serviceName$Service svc) {
