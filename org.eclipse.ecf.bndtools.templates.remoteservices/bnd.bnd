@@ -310,7 +310,7 @@ Provide-Capability: ${api-template},${impl-template},\
     ${rs-service-template},${rs-service-impl-template},\
     ${rs-service-consumer-template}
 
-package-version = 2.4.5
+package-version = 2.4.6
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
