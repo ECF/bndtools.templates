@@ -94,6 +94,15 @@ consumer-async-template:\
 		help=templates/rsconsumerhelpasync.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.consumer.xml
 
+python-hello-examples-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=Python.Java Remote Service Example; \
+		category=${project-category}; \
+		dir=templates/hellopythonexamples; \
+		icon="${rsimpl-icon}"; \
+		help=templates/hellopythonexamples.xml
+		
 launch-template-generic:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
 		name=Generic Distribution Provider with Zeroconf Discovery;\
@@ -308,9 +317,10 @@ Provide-Capability: ${api-template},${impl-template},\
     ${grpc-service-consumer-template-rx3},${rsasync-service-template},${rsasync-service-impl-template},\
     ${rsasync-service-consumer-template},\
     ${rs-service-template},${rs-service-impl-template},\
-    ${rs-service-consumer-template}
+    ${rs-service-consumer-template},\
+    ${python-hello-examples-template}
 
-package-version = 2.4.6
+package-version = 2.6.1
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 

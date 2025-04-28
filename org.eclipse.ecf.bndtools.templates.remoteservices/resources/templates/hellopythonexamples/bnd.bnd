@@ -1,0 +1,12 @@
+-buildpath: \
+	org.eclipse.ecf.provider.direct,\
+	org.osgi.framework,\
+	org.osgi.service.component.annotations,\
+	osgi.annotation,\
+	org.eclipse.ecf.examples.hello,\
+	org.eclipse.ecf.examples.protobuf.hello,\
+	org.osgi.util.promise,\
+	org.ops4j.pax.logging.pax-logging-api,\
+	wrapped.com.google.protobuf.protobuf-java
+	
+-includeresource python-src=python-src, ./logback.xml, ./run_python_example.py

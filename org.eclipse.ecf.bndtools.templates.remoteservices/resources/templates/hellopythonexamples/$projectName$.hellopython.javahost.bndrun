@@ -1,32 +1,25 @@
--runfw: org.eclipse.osgi;version=3.13
--runee: JavaSE-$javaLevel$
+-runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
+-runee: JavaSE-17
 
 -resolve.effective: active;skip:="osgi.service"
 
 -runrequires: \
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.scr)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.distribution)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.ecf.osgi.services.remoteserviceadmin.console)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.supplement)',\
-	bnd.identity;id='org.eclipse.ecf.examples.hello',\
-	bnd.identity;id='org.eclipse.ecf.examples.hello.javahost',\
-	bnd.identity;id='org.eclipse.ecf.examples.hello.provider',\
-	bnd.identity;id='org.slf4j.api',\
-	bnd.identity;id='org.slf4j.apis.log4j',\
-	bnd.identity;id='org.apache.log4j',\
-	bnd.identity;id='org.osgi.util.function',\
-	bnd.identity;id='org.osgi.util.promise',\
-    bnd.identity;id='org.apache.felix.gogo.runtime',\
-	bnd.identity;id='org.apache.felix.gogo.shell',\
-	bnd.identity;id='org.apache.felix.gogo.command'
-
--runproperties: osgi.console=,\
-				osgi.console.enable.builtin=false
-    
--runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false
+	bnd.identity;id='org.eclipse.ecf.osgi.services.distribution',\
+	bnd.identity;id='org.apache.felix.eventadmin',\
+	bnd.identity;id='org.apache.felix.scr',\
+	bnd.identity;id='org.ops4j.pax.logging.pax-logging-logback',\
+	bnd.identity;id='org.eclipse.ecf.provider.py4j',\
+	bnd.identity;id='org.eclipse.ecf.provider.py4j.protobuf',\
+	bnd.identity;id='org.apache.felix.gogo.command',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=$projectName$)'
 	
+-runproperties: \
+	osgi.console.enable.builtin=false,\
+	osgi.console=
+
+-runvm: -Dorg.eclipse.ecf.osgi.services.remoteserviceadmin.ITopologyManager.allowLocalhost=false,\
+-Dorg.ops4j.pax.logging.property.file=logback.xml
+
+-resolve: manual
