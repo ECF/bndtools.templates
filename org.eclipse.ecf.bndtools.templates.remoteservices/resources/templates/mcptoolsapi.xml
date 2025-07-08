@@ -1,0 +1,8 @@
+<form>
+<p>This template is used to create a Model Context Protocol (MCP) ArithmeticTools Example API project.</p>
+<p></p>
+<p>Upon creation, the project will have a single example ArithmeticTools service interface.</p>p>
+<p>The MCP ArithmeticTools Example Impl Server project template can then be used to create </p>
+<p>an implementation of the ArithmeticTools remote service.  The package name given when creating this project</p> 
+<p>will be required when creating the Example Impl Server and the Example MCP Server projects<//p>
+</form>

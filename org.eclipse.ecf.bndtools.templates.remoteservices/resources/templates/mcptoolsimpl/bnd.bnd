@@ -1,0 +1,7 @@
+-buildpath: \
+	$api_package$;version=snapshot,\
+	org.osgi.service.component.annotations,\
+	org.eclipse.ecf.ai.mcp.tools,\
+	slf4j.api,\
+	slf4j.simple
+	

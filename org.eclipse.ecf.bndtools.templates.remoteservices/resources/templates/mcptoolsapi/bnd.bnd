@@ -1,0 +1,5 @@
+-buildpath: \
+	org.eclipse.ecf.ai.mcp.tools,\
+	org.osgi.annotation.versioning,\
+	org.osgi.annotation.bundle
+Export-Package: $basePackageName$

@@ -1,0 +1,11 @@
+-buildpath: \
+	io.modelcontextprotocol.sdk.mcp,\
+	org.osgi.service.component.annotations,\
+	$api_package$;version=snapshot,\
+	com.fasterxml.jackson.core.jackson-databind,\
+	org.eclipse.ecf.ai.mcp.tools,\
+	io.projectreactor.reactor-core,\
+	org.ops4j.pax.logging.pax-logging-api,\
+	org.eclipse.ecf.remoteservice.asyncproxy
+	
+-export mcpserver.bndrun

@@ -2,7 +2,8 @@ project-category: bbb/Remote Service Project Templates
 service-category: bbb/Remote Service Templates
 bndrun-category: bbb/Remote Service Bndrun Templates
 bndrun-examples-category: bbb/Remote Service Example Templates
-
+mcp-category: bbb/Model Context Protocol (MCP) Example Project Templates 
+grpc-category: bbb/Grpc HealthCheck Example Project Templates 
 dataurl: data:image/gif;base64
 rsapi-icon: ${dataurl},${base64;icons/rsapi.gif}
 rsimpl-icon: ${dataurl},${base64;icons/rsimpl.gif}
@@ -195,7 +196,7 @@ grpc-apigenerated-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=gRPC HeathCheck Example API Project; \
-		category=${project-category}; \
+		category=${grpc-category}; \
 		dir=templates/grpcapigeneratedrx3; \
 		icon="${rsimpl-icon}"; \
 		help=templates/grpcapigeneratedrx3.xml
@@ -288,7 +289,7 @@ grpc-apigenerated-impl-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=gRPC HeathCheck Example Impl Project; \
-		category=${project-category}; \
+		category=${grpc-category}; \
 		dir=templates/grpcapigeneratedimplrx3; \
 		icon="${rsimpl-icon}"; \
 		help=templates/grpcapigeneratedimplrx3.xml; \
@@ -298,11 +299,50 @@ grpc-apigenerated-consumer-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
 		name=gRPC HealthCheck Example Consumer Project; \
-		category=${project-category}; \
+		category=${grpc-category}; \
 		dir=templates/grpcapigeneratedconsumerrx3; \
 		icon="${rsimpl-icon}"; \
 		help=templates/grpcapigeneratedconsumerrx3.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
+
+mcptoolsapi-template:\
+	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=MCP ArithmeticTools API Project; \
+		category=${mcp-category}; \
+		dir=templates/mcptoolsapi; \
+		icon="${rsapi-icon}"; \
+		help=templates/mcptoolsapi.xml
+
+mcptoolsimpl-template:\
+	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=MCP ArithmeticTools Impl Server Project; \
+		category=${mcp-category}; \
+		dir=templates/mcptoolsimpl; \
+		icon="${rsapi-icon}"; \
+		help=templates/mcptoolsimpl.xml; \
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
+
+mcptoolsserver-template:\
+	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=MCP Server/ArithmeticTools Consumer Project; \
+		category=${mcp-category}; \
+		dir=templates/mcptoolsconsumer; \
+		icon="${rsapi-icon}"; \
+		help=templates/mcptoolsserver.xml; \
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
+
+mcptoolsclient-template:\
+	org.bndtools.template;\
+		org.bndtools.template=project; \
+		name=MCP ArithmeticTools Test Client Project; \
+		category=${mcp-category}; \
+		dir=templates/mcptoolsclient; \
+		icon="${rsapi-icon}"; \
+		help=templates/mcptoolsclient.xml; \
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.mcpclient.xml
 
 Provide-Capability: ${api-template},${impl-template},\
     ${consumer-template},${api-async-template},\
@@ -318,9 +358,13 @@ Provide-Capability: ${api-template},${impl-template},\
     ${rsasync-service-consumer-template},\
     ${rs-service-template},${rs-service-impl-template},\
     ${rs-service-consumer-template},\
-    ${python-hello-examples-template}
+    ${python-hello-examples-template},\
+    ${mcptoolsapi-template},\
+    ${mcptoolsimpl-template},\
+    ${mcptoolsserver-template},\
+    ${mcptoolsclient-template}
 
-package-version = 2.6.1
+package-version = 2.7.0
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 

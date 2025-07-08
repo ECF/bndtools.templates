@@ -1,0 +1,6 @@
+<form>
+<p>This template is used to create a MCP ArithmeticTools Impl project.</p>
+<p></p>
+<p>Upon creation, the project will have a single Component that implements the ArithmeticTools</p>
+<p>interface.</p>
+</form>

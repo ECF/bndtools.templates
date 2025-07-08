@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# this is necessary because we are using a protocol buffer-generated
+# python code from fairly long ago
+import os
+os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION']='python'
+
 print("NOTE: Running this program successfully has two requirements")
 print("")
 print("  1) Installing (via pip or other) iPOPO version >= 3.1.0 in your python ")
