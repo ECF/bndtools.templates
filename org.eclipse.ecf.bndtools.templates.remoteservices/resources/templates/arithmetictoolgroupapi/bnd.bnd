@@ -1,0 +1,7 @@
+-buildpath: \
+	org.osgi.annotation.versioning,\
+	org.osgi.annotation.bundle,\
+	org.springaicommunity.mcp-annotations,\
+	io.projectreactor.reactor-core,\
+	io.modelcontextprotocol.sdk.mcp
+Export-Package: $basePackageName$

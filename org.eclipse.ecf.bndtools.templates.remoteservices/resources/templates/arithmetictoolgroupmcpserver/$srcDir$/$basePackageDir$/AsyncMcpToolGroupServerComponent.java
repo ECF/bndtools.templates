@@ -1,0 +1,59 @@
+package $basePackageName$;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.composent.ai.mcp.toolgroup.AbstractAsyncMcpToolGroupServer;
+import com.composent.ai.mcp.toolgroup.AsyncMcpToolGroupServer;
+import com.composent.ai.mcp.transport.uds.UDSMcpServerTransportProvider;
+
+import io.modelcontextprotocol.server.McpAsyncServer;
+import io.modelcontextprotocol.server.McpServer;
+import io.modelcontextprotocol.spec.McpSchema.ServerCapabilities;
+
+@Component(immediate = true, service = { AsyncMcpToolGroupServer.class })
+public class AsyncMcpToolGroupServerComponent extends AbstractAsyncMcpToolGroupServer {
+
+	private static Logger logger = LoggerFactory.getLogger(AsyncMcpToolGroupServerComponent.class);
+	// file named to be used for client <-> server communication
+	private final Path socketPath = Paths.get("").resolve("a.socket").toAbsolutePath();
+
+	private McpAsyncServer server;
+
+	// Creates McpAsyncServer upon component activation
+	@Activate
+	void activate() throws Exception {
+		// The s.socket file might still be there from previous run
+		Files.deleteIfExists(socketPath);
+		logger.debug("starting sync server with socketPath={}", socketPath);
+		// Create unix domain socket transport
+		UDSMcpServerTransportProvider transport = new UDSMcpServerTransportProvider(socketPath);
+		// Build/start async server using transport
+		this.server = McpServer.async(transport).serverInfo(AsyncMcpToolGroupServerComponent.class.getName(), "1.0.0")
+				.capabilities(ServerCapabilities.builder().tools(true).build()).build();
+		logger.debug("async server started");
+	}
+
+	@Deactivate
+	void deactivate() throws Exception {
+		if (this.server != null) {
+			this.server.closeGracefully();
+			this.server = null;
+			Files.deleteIfExists(socketPath);
+			logger.debug("async server stopped");
+		}
+	}
+
+	@Override
+	protected McpAsyncServer getServer() {
+		return server;
+	}
+
+}

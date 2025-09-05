@@ -305,39 +305,29 @@ grpc-apigenerated-consumer-template-rx3:\
 		help=templates/grpcapigeneratedconsumerrx3.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
 
-mcptoolsapi-template:\
+arithmetictoolgroupapi-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=MCP ArithmeticTools API Project; \
+		name=ArithmeticToolGroup API Project; \
 		category=${mcp-category}; \
-		dir=templates/mcptoolsapi; \
+		dir=templates/arithmetictoolgroupapi; \
 		icon="${rsapi-icon}"; \
-		help=templates/mcptoolsapi.xml
+		help=templates/arithmetictoolgroupapi.xml
 
-mcptoolsimpl-template:\
+arithmetictoolgroupmcpserver-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=MCP ArithmeticTools Impl Server Project; \
+		name=ArithmeticToolGroup MCP Servers Project; \
 		category=${mcp-category}; \
-		dir=templates/mcptoolsimpl; \
+		dir=templates/arithmetictoolgroupmcpserver; \
 		icon="${rsapi-icon}"; \
-		help=templates/mcptoolsimpl.xml; \
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
-
-mcptoolsserver-template:\
-	org.bndtools.template;\
-		org.bndtools.template=project; \
-		name=MCP Server/ArithmeticTools Consumer Project; \
-		category=${mcp-category}; \
-		dir=templates/mcptoolsconsumer; \
-		icon="${rsapi-icon}"; \
-		help=templates/mcptoolsserver.xml; \
+		help=templates/arithmetictoolgroupmcpserver.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
 
 mcptoolsclient-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
-		name=MCP ArithmeticTools Test Client Project; \
+		name=ArithmeticTools MCP Test Client Project; \
 		category=${mcp-category}; \
 		dir=templates/mcptoolsclient; \
 		icon="${rsapi-icon}"; \
@@ -359,12 +349,11 @@ Provide-Capability: ${api-template},${impl-template},\
     ${rs-service-template},${rs-service-impl-template},\
     ${rs-service-consumer-template},\
     ${python-hello-examples-template},\
-    ${mcptoolsapi-template},\
-    ${mcptoolsimpl-template},\
-    ${mcptoolsserver-template},\
+    ${arithmetictoolgroupapi-template},\
+    ${arithmetictoolgroupmcpserver-template},\
     ${mcptoolsclient-template}
 
-package-version = 2.7.0
+package-version = 2.8.0
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 

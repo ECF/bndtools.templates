@@ -1,0 +1,5 @@
+<form>
+<p>This template will create a ArithmeticTools MCP Servers project.   Upon creation, the 
+project will have a ArithmeticToolGroup implementation (ArithmeticToolGroupComponent class) and two MCP server components: One for 
+an McpSyncServer and the other an McpAsyncServer</p>
+</form>
