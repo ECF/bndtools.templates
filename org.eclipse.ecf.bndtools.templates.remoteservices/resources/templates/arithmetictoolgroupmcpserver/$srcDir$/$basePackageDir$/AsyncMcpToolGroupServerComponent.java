@@ -32,9 +32,9 @@ public class AsyncMcpToolGroupServerComponent extends AbstractAsyncMcpToolGroupS
 	void activate() throws Exception {
 		// The s.socket file might still be there from previous run
 		Files.deleteIfExists(socketPath);
-		logger.debug("starting sync server with socketPath={}", socketPath);
+		logger.debug("starting async server with uds path={}", socketPath);
 		// Create unix domain socket transport
-		UDSMcpServerTransportProvider transport = new UDSMcpServerTransportProvider(socketPath);
+		UDSMcpServerTransportProvider transport = new UDSMcpServerTransportProvider(socketPath, true);
 		// Build/start async server using transport
 		this.server = McpServer.async(transport).serverInfo(AsyncMcpToolGroupServerComponent.class.getName(), "1.0.0")
 				.capabilities(ServerCapabilities.builder().tools(true).build()).build();

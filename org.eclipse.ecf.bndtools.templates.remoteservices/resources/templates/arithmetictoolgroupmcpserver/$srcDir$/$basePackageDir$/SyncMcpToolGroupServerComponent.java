@@ -32,9 +32,9 @@ public class SyncMcpToolGroupServerComponent extends AbstractSyncMcpToolGroupSer
 		// The s.socket file might still be there from previous run/debug, so we'll
 		// delete it
 		Files.deleteIfExists(socketPath);
-		logger.debug("starting uds sync server with socket at path={}", socketPath);
+		logger.debug("starting sync server with uds at path={}", socketPath);
 		// Create unix domain socket transport
-		UDSMcpServerTransportProvider transport = new UDSMcpServerTransportProvider(socketPath);
+		UDSMcpServerTransportProvider transport = new UDSMcpServerTransportProvider(socketPath, true);
 		// Create sync server
 		this.server = McpServer.sync(transport)
 				.serverInfo(SyncMcpToolGroupServerComponent.class.getName(), "1.0.0")

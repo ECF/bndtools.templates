@@ -40,10 +40,10 @@ public class ArithmeticToolGroupComponent implements ArithmeticToolGroup {
 	@Activate
 	void activate() {
 		syncToolspecs = new SyncMcpToolGroupProvider(this, ArithmeticToolGroup.class).getToolSpecifications();
-		// Add to syncServer
+		// Add sync specifications to syncServer
 		syncServer.addTools(syncToolspecs);
 		asyncToolspecs = new AsyncMcpToolGroupProvider(this, ArithmeticToolGroup.class).getToolSpecifications();
-		// Add to asyncServer
+		// Add async specifications to asyncServer
 		asyncServer.addTools(asyncToolspecs);
 	}
 
@@ -57,7 +57,6 @@ public class ArithmeticToolGroupComponent implements ArithmeticToolGroup {
 			this.asyncServer.removeTools(asyncToolspecs);
 			asyncToolspecs = null;
 		}
-
 	}
 
 	@Override
@@ -83,13 +82,13 @@ public class ArithmeticToolGroupComponent implements ArithmeticToolGroup {
 	@Override
 	public Mono<Double> asyncAdd(double x, double y) {
 		logger.debug("Async Adding x={} y={}", x, y);
-		return Mono.fromRunnable(() -> add(x, y));
+		return Mono.just(add(x, y));
 	}
 
 	@Override
 	public Mono<Double> asyncMultiply(double x, double y) {
 		logger.debug("Async Multiplying x={} y={}", x, y);
-		return Mono.fromRunnable(() -> multiply(x, y));
+		return Mono.just(multiply(x, y));
 	}
 
 }
