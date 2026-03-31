@@ -1,7 +1,5 @@
 <form>
-<p>This template will create a ArithmeticToolGroup API project. Upon creation, the project will have a single example ArithmeticToolGroup interface class.
-The ArithmeticToolGroup MCP Servers project template can then be used to create 
-an implementation of the ArithmeticTools remote service, an McpSyncServer and an McpAsyncServer.  The package name 
-given when creating this project
-will be required when creating the ArithmeticToolGroup MCP Servers</p>
+<p>This template will create an MCP ToolGroups Example API project.
+See the Readme.md in the created project for instructions on 
+how to use this API with MCP example servers and clients.</p>
 </form>

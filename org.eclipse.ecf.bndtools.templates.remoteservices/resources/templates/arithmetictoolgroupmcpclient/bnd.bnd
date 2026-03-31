@@ -1,6 +1,14 @@
 -buildpath: \
 	org.osgi.service.component.annotations,\
-	io.modelcontextprotocol.sdk.mcp,\
 	slf4j.api,\
-	com.composent.ai.mcp.transport.uds,\
-	io.projectreactor.reactor-core
+	osgi.core,\
+	io.modelcontextprotocol.sdk.mcp-core,\
+	org.osgi.service.component,\
+	org.osgi.annotation.bundle,\
+	org.openmcptools.common,\
+	org.openmcptools.common.impl.spring,\
+	org.openmcptools.common.client,\
+	org.openmcptools.transport.uds.spring,\
+	org.openmcptools.transport.uds,\
+	$api_package$,\
+	org.openmcptools.transport

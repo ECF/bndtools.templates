@@ -1,11 +1,13 @@
--buildpath: \
+	-buildpath: \
 	org.osgi.service.component.annotations,\
+	slf4j.api,\
 	$api_package$;version=snapshot,\
-	org.eclipse.ecf.ai.mcp.tools,\
+	org.osgi.service.component,\
+	io.modelcontextprotocol.sdk.mcp-core,\
+	org.openmcptools.common.server,\
+	org.openmcptools.common,\
 	io.projectreactor.reactor-core,\
-	com.composent.ai.mcp.transport.uds,\
-	io.modelcontextprotocol.sdk.mcp,\
-	com.composent.ai.mcp.toolgroup,\
-	org.springaicommunity.mcp-annotations,\
-	slf4j.api
+	org.openmcptools.common.impl.spring,\
+	org.openmcptools.transport.uds.spring,\
+	org.openmcptools.transport
 	

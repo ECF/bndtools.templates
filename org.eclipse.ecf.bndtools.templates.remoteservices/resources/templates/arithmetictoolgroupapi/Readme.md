@@ -1,15 +1,22 @@
-#ArithmeticToolGroup API project
+#MCP ToolGroups Example API project
 
-This project contains a single interface class: [ArithmeticToolGroup](src/main/java/$basePackageDir$/ArithmeticToolGroup.java).  This interface's
-methods are annotated with @McpTool and @McpToolParam annotations from the Spring [mcp-annotation](https://github.com/spring-ai-community/mcp-annotations) project.
-These annotations allow the developer to specify the tool descriptions meta-data directly as part of the interface contract.
+This project has a simple MCP [ArithmeticTools](src/main/java/$basePackageDir$/math/ArithmeticTools.java) service interface.
 
-There are both synchronous (plain return types), and asynchronous (reactive.Mono return types) defined in the ArithmeticToolGroup contract.  
-McpSyncServer instances can expose the synchronous methods of the contract, and McpAsyncServer instances can expose the asynchronous methods.
- 
-##Next Steps: Create MCP ArithmeticToolGroup Server project
+The ArithmeticTools methods are annotated with the @McpTool annotations. 
 
-An implementation of ArithmeticToolGroup contract is in a project created via the MCP ArithmeticToolGroup Server roject template. 
-To create a new project using this template choose File->New->Bnd OSGi Project->MCP ArithmeticToolGroup Server template.
+In this example API project, the @McpToolGroup annotation is used to
+annotate the [ArithmeticTools class](src/$basePackageDir$/math/ArithmeticTools.java) as well as it's parent package defined in the $basePackageName$/package-info.java). 
 
-Once the project is created, see the Readme.md in that project.
+These two McpToolGroup annotations defines a simple
+two-level group hierarchy, with the parent package defining the root group, and the ArithmeticTools class defining a sub-group for the McpTool-annotated ArithmeticTools methods.
+
+##Next Steps: 
+
+###Create a MCP ToolGroups Example Server Project
+
+Choose File->New->Bnd OSGi Project->MCP ToolGroups Example Servers project.  
+
+Complete the project creation wizard to create a new project in workspace.
+
+See the Readme.md in the new example servers project for instructions on launching.
+
