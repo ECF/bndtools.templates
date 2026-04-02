@@ -8,7 +8,7 @@ public @interface HostTemplateMeta {
 
 	public static final String NAME = "Remote Service Host Project Template";
 
-	@AttributeDefinition(name = "API Package/Project", description = "Previously-created API Package/Project. A project can be created via the JaxRS Remote Service API template")
-	String api__package() default "<your.api.package.here>";
+	@AttributeDefinition(name = "API Project", description = "To create a new API project: File->New->Bnd OSGi Project and select appropriate API project template")
+	String api__package() default "<your.api.project.name.here>";
 
 }

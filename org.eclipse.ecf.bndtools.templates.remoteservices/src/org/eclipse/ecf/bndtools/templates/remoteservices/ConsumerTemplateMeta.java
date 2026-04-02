@@ -6,9 +6,9 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 @ObjectClassDefinition(id = "org.eclipse.ecf.bndtools.templates.remoteservices.consumer", name = ConsumerTemplateMeta.NAME, description = ConsumerTemplateMeta.NAME)
 public @interface ConsumerTemplateMeta {
 
-	public static final String NAME = "Remote Service Consumer Project Template";
+	public static final String NAME = "Remote Service Sync Consumer Project Template";
 
-	@AttributeDefinition(name = "API Package/Project", description = "Previously-created API Package/Project. A project can be created via one of the API project templates")
-	String api__package() default "<your.api.package.here>";
+	@AttributeDefinition(name = "API Project", description = "To create a new API project: File->New->Bnd OSGi Project and select appropriate API project template")
+	String api__package() default "<your.api.project.name.here>";
 
 }

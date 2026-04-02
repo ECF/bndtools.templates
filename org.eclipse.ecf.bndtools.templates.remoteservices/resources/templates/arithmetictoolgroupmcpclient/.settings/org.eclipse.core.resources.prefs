@@ -1,3 +1,8 @@
 eclipse.preferences.version=1
-encoding/<project>=windows-1252
+encoding//.settings/org.eclipse.jdt.core.prefs=UTF-8
+encoding//src/main/java/mine/api/math/ArithmeticTools.java=UTF-8
+encoding//src/main/java/mine/api/math/package-info.java=UTF-8
+encoding//src/main/java/mine/api/package-info.java=UTF-8
+encoding/<project>=UTF-8
+encoding/Readme.md=UTF-8
 encoding/bnd.bnd=UTF-8

@@ -8,7 +8,7 @@ public @interface ImplTemplateMeta {
 
 	public static final String NAME = "Remote Service Project Template";
 
-	@AttributeDefinition(name = "API Package/Project", description = "Previously-created API Package/Project. A project can be created via the Remote Service API template")
+	@AttributeDefinition(name = "API Project", description = "To create a new API project: File->New->Bnd OSGi Project and select appropriate API project template")
 	String api__package() default "<your.api.package.here>";
 
 	@AttributeDefinition(name = "Service Exported Config", description = "The service exported config identifying the distribution provider for export")

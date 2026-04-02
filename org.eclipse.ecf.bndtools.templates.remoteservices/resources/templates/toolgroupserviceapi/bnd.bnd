@@ -1,0 +1,7 @@
+-buildpath: \
+	org.osgi.annotation.versioning,\
+	org.osgi.annotation.bundle,\
+	io.projectreactor.reactor-core,\
+	org.openmcptools.annotation
+
+Export-Package: $basePackageName$,$basePackageName$.math

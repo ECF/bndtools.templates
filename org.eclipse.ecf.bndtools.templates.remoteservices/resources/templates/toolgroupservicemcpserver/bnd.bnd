@@ -1,0 +1,13 @@
+	-buildpath: \
+	org.osgi.service.component.annotations,\
+	slf4j.api,\
+	$api_package$;version=snapshot,\
+	org.osgi.service.component,\
+	io.modelcontextprotocol.sdk.mcp-core,\
+	org.openmcptools.common.server,\
+	org.openmcptools.common,\
+	io.projectreactor.reactor-core,\
+	org.openmcptools.common.impl.spring,\
+	org.openmcptools.transport.uds.spring,\
+	org.openmcptools.transport
+	

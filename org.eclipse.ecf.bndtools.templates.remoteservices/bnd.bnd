@@ -125,20 +125,6 @@ launch-template-grpc-etcd:\
 		dir=templates/launch/grpcetcd;\
 	    help=templates/grpcetcdbndrun.xml
 
-launch-template-rosgi:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ROSGi Distribution Provider with Zeroconf Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/rosgi;\
-	    help=templates/rosgibndrun.xml
-
-launch-template-rosgi-etcd:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ROSGi Distribution Provider with Etcd3 Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/rosgietcd;\
-	    help=templates/rosgietcdbndrun.xml
-		
 launch-template-jaxrsjerseyserver:\
 	org.bndtools.template; org.bndtools.template=bndrun;\
 		name=JaxRS Jersey Server Distribution Provider with Zeroconf Discovery;\
@@ -154,44 +140,7 @@ launch-template-jaxrsjerseyclient:\
 		dir=templates/launch/jaxrsjerseyclient;\
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.consumer.xml;\
 	    help=templates/jaxrsjerseyclientbndrun.xml
-		
-launch-template-jaxrscxfserver:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=JaxRS CXF Server Distribution Provider with Zeroconf Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/jaxrscxfserver;\
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.host.xml;\
-	    help=templates/jaxrscxfserverbndrun.xml
-
-launch-template-jaxrscxfclient:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=JaxRS CXF Client Distribution Provider with Zeroconf Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/jaxrscxfclient;\
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.async.consumer.xml;\
-	    help=templates/jaxrscxfclientbndrun.xml
-
-launch-template-activemq:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=ActiveMQ Distribution Provider with Zeroconf Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/activemq;\
-	    help=templates/activemqbndrun.xml
-	   
-launch-template-hazelcast:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=Hazelcast Distribution Provider with Zeroconf Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/hazelcast;\
-	    help=templates/hazelcastbndrun.xml
-
-launch-template-hazelcast2:\
-	org.bndtools.template; org.bndtools.template=bndrun;\
-		name=Hazelcast Distribution Provider with Hazelcast Discovery;\
-		category=${bndrun-category};\
-		dir=templates/launch/hazelcasthazelcast;\
-	    help=templates/hazelcast2bndrun.xml
-
+		   
 grpc-apigenerated-template-rx3:\
  	org.bndtools.template;\
 		org.bndtools.template=project; \
@@ -314,6 +263,13 @@ arithmetictoolgroupapi-template:\
 		icon="${rsapi-icon}"; \
 		help=templates/arithmetictoolgroupapi.xml
 
+toolgroupapi-service-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-api; \
+		name=toolgroup; \
+		category=${service-category}; \
+		dir=templates/toolgroupserviceapi
+
 arithmetictoolgroupmcpserver-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
@@ -324,6 +280,13 @@ arithmetictoolgroupmcpserver-template:\
 		help=templates/arithmetictoolgroupmcpserver.xml; \
 		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.host.xml
 
+toolgroupmcpserver-service-impl-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-impl; \
+		name=toolgroup; \
+		category=${service-category}; \
+		dir=templates/toolgroupservicemcpserver
+
 arithmetictoolgroupmcpclient-template:\
 	org.bndtools.template;\
 		org.bndtools.template=project; \
@@ -332,7 +295,14 @@ arithmetictoolgroupmcpclient-template:\
 		dir=templates/arithmetictoolgroupmcpclient; \
 		icon="${rsapi-icon}"; \
 		help=templates/arithmetictoolgroupmcpclient.xml; \
-		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.mcpclient.xml
+		metaType=OSGI-INF/metatype/org.eclipse.ecf.bndtools.templates.remoteservices.consumer.xml
+
+toolgroupmcpclient-service-template:\
+ 	org.bndtools.template;\
+		org.bndtools.template=service-consumer; \
+		name=toolgroup; \
+		category=${service-category}; \
+		dir=templates/toolgroupservicemcpclient
 
 Provide-Capability: ${api-template},${impl-template},\
     ${consumer-template},${api-async-template},\
@@ -351,9 +321,10 @@ Provide-Capability: ${api-template},${impl-template},\
     ${python-hello-examples-template},\
     ${arithmetictoolgroupapi-template},\
     ${arithmetictoolgroupmcpserver-template},\
-    ${arithmetictoolgroupmcpclient-template}
+    ${arithmetictoolgroupmcpclient-template},\
+    ${toolgroupapi-service-template},${toolgroupmcpserver-service-impl-template},${toolgroupmcpclient-service-template}
 
-package-version = 2.9.1
+package-version = 2.12.0
 bundle-version = ${package-version}.${tstamp}
 Bundle-Version: ${bundle-version}
 
